@@ -1,28 +1,9 @@
-@media (min-width: 576px) {
-    .about-info-text{
-        line-height: 25px;
-    }
-    .about-info-title{
-        font-size: 16px;
-    }
-    
-    
-}
 @media (min-width: 992px) {
-    .about-info-text{
-        font-size: 16px;
-        
-    }
     .papirus{
         width: 400px;
     }
-    
 }
 @media (min-width: 1200px) {
-    .about-info-text{
-        font-size: 16px;
-        line-height: 28px;
-    }
    
     .about-title{
         font-size: 40px;

@@ -15,18 +15,3 @@
     cursor: pointer;
 }
 
-.about-info-text{
-    font-size: 2vw;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    line-height: 14px;
-    font-weight: 300;
-}
-.about-info-title{
-    font-size: 16px;
-}
-.about-info-list{
-    list-style-type: disc;
-    list-style: inside;
-    padding-left: 4px;
-}

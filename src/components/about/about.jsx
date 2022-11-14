@@ -14,7 +14,7 @@ const aboutTxt = [
 
 const AboutText = () =>{
     return(       
-        <div className="about-info-text">
+        <div className="info-text">
              {aboutTxt.map(txt =>
                 <React.Fragment key={txt}>
                     <p>{txt}</p>
