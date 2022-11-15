@@ -9,6 +9,8 @@
 }
 .agenda-dates{
     display: flex;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 3vh;
 }
 .scrolls{
     display: flex;
