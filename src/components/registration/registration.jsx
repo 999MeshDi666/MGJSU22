@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState} from "react";
 import Overlay from "../overlay/overlay";
-import "./registration-styles/registration.css";
 import { Container } from "react-bootstrap";
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css'; 
+import "./registration-styles/registration.css";
 import kempir from "../../images/turkic/kempir.gif";
 
 const formFields = [
@@ -55,9 +57,22 @@ const formFields = [
 ]
 
 
-const Form = () =>{
+const Form = ({handleShowText}) =>{
+    var notyf = new Notyf({
+        duration: 1000,
+        position: {
+          x: 'right',
+          y: 'top',
+        },
+        types: [
+            {
+              type: 'success',
+              background: '#95917e',
+            },
+        ]
+    });
 
-    const [formData, setFormData] = useState({
+    const initialFormData = {
         "entry.622377088": "",
         "entry.966331574": "",
         "entry.1842236906": "",
@@ -67,7 +82,9 @@ const Form = () =>{
         "entry.1712183872": "",
         "entry.752129752": "",
         "entry.1555555961": "",
-    });
+    }
+    const [formData, setFormData] = useState(initialFormData);
+
    
     const handleInputData = (input) => (e) => {
         const { value } = e.target;
@@ -77,16 +94,20 @@ const Form = () =>{
           [input]: value
         }));
     };
-
+   
     async function handleSubmit(e) {
-        e.preventDefault()
-        let url = `https://docs.google.com/forms/u/1/d/e/1FAIpQLSdxBG_we1ZXQ0yBwIs14s3CoAEgNkON1tx0ZpWmU20BjDmLkQ/formResponse?entry.622377088=${formData["entry.622377088"]}&entry.966331574=${formData["entry.966331574"]}&entry.1842236906=${formData["entry.1842236906"]}&entry.1419582377=${formData["entry.1419582377"]}&entry.1601897725=${formData["entry.1601897725"]}&entry.1688673403=${formData["entry.1688673403"]}&entry.1712183872=${formData["entry.1712183872"]}&entry.752129752=${formData["entry.752129752"]}&entry.1555555961=${formData["entry.1555555961"]}`;
-        const res = await fetch(url, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-          }
-        }).then();
+        notyf.success("Регистрация прошла успешно")
+        handleShowText();
+        e.preventDefault();
+        setFormData(initialFormData); 
+        
+        // let url = `https://docs.google.com/forms/u/1/d/e/1FAIpQLSdxBG_we1ZXQ0yBwIs14s3CoAEgNkON1tx0ZpWmU20BjDmLkQ/formResponse?entry.622377088=${formData["entry.622377088"]}&entry.966331574=${formData["entry.966331574"]}&entry.1842236906=${formData["entry.1842236906"]}&entry.1419582377=${formData["entry.1419582377"]}&entry.1601897725=${formData["entry.1601897725"]}&entry.1688673403=${formData["entry.1688673403"]}&entry.1712183872=${formData["entry.1712183872"]}&entry.752129752=${formData["entry.752129752"]}&entry.1555555961=${formData["entry.1555555961"]}`;
+        // const res = await fetch(url, {
+        //   method: "POST",
+        //   headers: {
+        //     "Content-Type": "application/x-www-form-urlencoded"
+        //   }
+        // })
     }
     return(
         <form method="post"  
@@ -95,10 +116,10 @@ const Form = () =>{
         >
             {formFields.map((input, index)=>
                 <input 
-                    type={input.type} 
-                    placeholder={input.placeholder} 
                     key={index} 
+                    type={input.type} 
                     name={input.name}
+                    placeholder={input.placeholder} 
                     value={formData[input.name]}
                     className="reg-control"
                     onChange={handleInputData(input.name)}
@@ -113,7 +134,6 @@ const Form = () =>{
 }
 const Registration = ({handleShowText, show}) =>{
   
-    const [submit, setSubmit] = useState(false);
     return(
         <section className="registration page">
             <Container className="wrapper">
@@ -122,6 +142,7 @@ const Registration = ({handleShowText, show}) =>{
                         <h2 className="general-title">Регистрация на SUMGJ22</h2>
                         <p className="general-subtitle">Регистрация команды</p>
                     </div>
+                    
                     <div className="form">
                         <h3 className="form-title">
                             Начните свой путь в геймдев с нами на GameJam
@@ -134,7 +155,7 @@ const Registration = ({handleShowText, show}) =>{
             <Overlay 
                 handleShowText={handleShowText} 
                 show={show}
-                content={<Form/>} 
+                content={<Form handleShowText={handleShowText}/>} 
             />
             <img src={kempir} className="kempir gif-img" alt="kempir"/>
         </section>
