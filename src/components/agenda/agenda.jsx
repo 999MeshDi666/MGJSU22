@@ -79,7 +79,7 @@ const AgendaText = ({imgIndex}) =>{
         {
              
             title: (<h3 className="info-title">
-                        Субботник 10 декабря <br/> (Закрытие фестиваля)
+                        Суббота 10 декабря <br/> (Закрытие фестиваля)
                     </h3>),
               dates: [
                 {
