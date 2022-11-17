@@ -30,7 +30,7 @@ const Main = ({toSlide}) =>{
         <section className="main page">
             <Container className="wrapper main-wrapper">
                 <div className="main_content">
-                    <p className="main_subtitle">Алматы. 7-9 Декабря</p>
+                    <p className="main_subtitle">Алматы. 6-10 Декабря</p>
                     <h1 className="main_title">GameJam <br/> 2022</h1>
                     <button className="main_reg-btn" onClick={()=> toSlide(2)}>Регистрация</button>
                 </div>

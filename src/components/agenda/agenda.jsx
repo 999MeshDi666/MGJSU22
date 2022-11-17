@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 import scroll1 from "../../images/japan/scroll1.png";
 import scroll2 from "../../images/japan/scroll2.png";
 import scroll3 from "../../images/japan/scroll3.png";
-
+import benzaiten from "../../images/japan/benzaiten.png";
 
 const AgendaText = ({imgIndex}) =>{
   
@@ -157,11 +157,13 @@ const Agenda = ({handleShowText, show, imgIndex}) =>{
                     </div>
                 </div>
             </Container>
+       
             <Overlay 
                 handleShowText={handleShowText} 
                 show={show} 
                 content={<AgendaText imgIndex={imgIndex} />}
-                />
+            />
+            <img src={benzaiten} className="benzaiten gif-img" alt="benzaiten"/>
             
         </section>
     )
