@@ -82,6 +82,29 @@ a {
   position: fixed;
 }
 
+.card{
+
+  padding: 24px;
+  box-shadow: -10px 10px 40px 1px rgba(0, 0, 0, 0.4);
+}
+.card-title{
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.general-btns{
+  width: 100%;
+  margin-top: 6vh;
+  padding: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  transition: .6s;
+  border: 1px solid #000;
+}
+
 .general-text{
   margin-bottom: 4vh;
 }
@@ -112,10 +135,17 @@ a {
 .info-subtitle{
   font-weight: bold;
 }
-.info-list{
+.info-lists{
   list-style-type: disc;
   list-style: inside;
   padding-left: 4px;
+}
+.info-lists li{
+  margin-bottom: 4px;
+}
+.gif-img{
+  position: absolute;
+  bottom: 0;
 }
 @media (min-width: 576px) {
   .info-text{
@@ -125,7 +155,10 @@ a {
   
 }
 @media (min-width: 768px) {
-  
+  .card{
+    width: 500px;
+    margin: 0 auto;
+  }
   .general-title{
     font-size: 54px;
     font-weight: bold;
@@ -142,6 +175,10 @@ a {
   .info-text{
     font-size: 16px;
     line-height: 28px;
+  }
+  .card{ 
+    padding: 32px 45px;
+    margin: 0;
   }
   .general-title{
     font-size: 40px;

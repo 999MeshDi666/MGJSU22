@@ -127,7 +127,7 @@ const Form = ({handleShowText}) =>{
                 />
             
             )}
-        <input type="submit" value="Регистрация" className="form-btns reg-btn"/>
+        <input type="submit" value="Регистрация" className="general-btns reg-btn"/>
     </form>
 
     )
@@ -143,11 +143,11 @@ const Registration = ({handleShowText, show}) =>{
                         <p className="general-subtitle">Регистрация команды</p>
                     </div>
                     
-                    <div className="form">
-                        <h3 className="form-title">
+                    <div className="card card-reg">
+                        <h3 className="card-title">
                             Начните свой путь в геймдев с нами на GameJam
                         </h3>
-                        <button className="form-btns start-btn" onClick={handleShowText}>Начать</button>
+                        <button className="general-btns card-reg-btn" onClick={handleShowText}>Начать</button>
                     </div>
                    
                 </div>

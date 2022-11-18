@@ -32,7 +32,7 @@ const Main = ({toSlide}) =>{
                 <div className="main_content">
                     <p className="main_subtitle">Алматы. 6-10 Декабря</p>
                     <h1 className="main_title">GameJam <br/> 2022</h1>
-                    <button className="main_reg-btn" onClick={()=> toSlide(2)}>Регистрация</button>
+                    <button className="main_reg-btn" onClick={()=> toSlide(5)}>Регистрация</button>
                 </div>
             </Container>
             <img src={venus} className="venus gif-img" alt="venus"/>

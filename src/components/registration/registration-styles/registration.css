@@ -4,41 +4,11 @@
     height: 100vh;
 }
 .kempir{
-    position: absolute;
     right: -25vw;
-    bottom: 0;
     height: 90vh;
 }
 .reg-text{
     margin-bottom: 8vh;
-}
-.form{
-    background-color: #b8b399ba;
-    padding: 24px;
-    box-shadow: -10px 10px 40px 1px rgba(0, 0, 0, 0.4);
-}
-.form-title{
-    font-size: 26px;
-    line-height: 36px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-.form-btns{
-    background-color: #979483;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 14px;
-    transition: .6s;
-    border: 1px solid #000;
-}
-.start-btn{
-    width: 100%;
-    margin-top: 6vh;
-    font-weight: bold;
-    border: 1px solid #000;
-}
-.form-btns:hover{
-    background-color: #8e8b7b;
 }
 .reg-form{
     width: 100%;
@@ -63,6 +33,17 @@
     margin-top: 3vh;
     background-color: #979483;
     padding: 14px;
+    font-weight: normal;
+}
+.card-reg{
+    background-color: #b8b399ba;
+}
+.card-reg-btn{
+    background-color: #979483;
+}
+.card-reg-btn:hover,
+.reg-btn:hover{
+    background-color: #8e8b7b;
 }
 @media (min-width: 576px) {
     .reg-form{
@@ -78,10 +59,6 @@
     
 }
 @media (min-width: 768px) {
-    .form{
-        width: 500px;
-        margin: 0 auto;
-    }
     .kempir{
         right: 4vw;
     }
@@ -89,10 +66,8 @@
 }
 @media (min-width: 992px) {
 
-    .form{
+    .card-reg{
         background-color: #B8B399;
-        padding: 32px 45px;
-        margin: 0;
     }
     .reg-control{
         margin-bottom: 12px;

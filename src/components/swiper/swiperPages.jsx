@@ -8,7 +8,7 @@ import Main from "../main/main";
 import About from "../about/about";
 import Agenda from "../agenda/agenda";
 import Registration from "../registration/registration";
-
+import Rules from "../rules/rules";
 import { useSwiper } from 'swiper/react';
 
 
@@ -41,7 +41,7 @@ const SwiperPages = () =>{
                 speed = {800}
                 slidesPerView={"auto"}
                 loop = {true}
-                loopedSlides = {3}
+                loopedSlides = {1}
                 mousewheel={true}
                 pagination={{
                     clickable: true,
@@ -64,6 +64,13 @@ const SwiperPages = () =>{
                         imgIndex={imgIndex}
                     />
                 </SwiperSlide>
+                <SwiperSlide>
+                    <Rules 
+                        handleShowText={handleShowText} 
+                        show={show}
+                    />
+                </SwiperSlide>
+             
                 <SwiperSlide>
                     <Registration
                         handleShowText={handleShowText} 

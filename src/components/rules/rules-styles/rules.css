@@ -1,0 +1,30 @@
+.rule{
+    background-color: #3D6C41;
+}
+.loki{
+    right: -25vw;
+    height: 90vh;
+}
+.card-rule{
+    background-color: #709874c1;
+}
+.card-rule-btn{
+    background-color: #495E44;
+}
+.card-rule-btn:hover{
+    background-color: #3d4f39;
+}
+
+@media (min-width: 768px) {
+    .loki{
+        right: 4vw;
+    }
+}
+@media (min-width: 992px) {
+
+    .card-rule{
+        background-color: #709874;
+    }
+   
+    
+}
