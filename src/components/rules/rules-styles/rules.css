@@ -4,40 +4,24 @@
 
 .loki-thor{   
     right: -25vw;
-    transition: .2s;
+    transition: .2s ease-in-out;
 }
 
-.ease-in{
-    animation:  ease_in_img 2s  4s 1 forwards;
+.fade-enter {
     opacity: 0;
-   
+    transform: rotateY(0deg);
 }
-.ease-out{
-    animation: ease_out_img 2s 2s 1 forwards;
-    opacity: 1;
+
+.fade-exit-active {
+    opacity: 0;
+    transform: rotateY(180deg);
 }
-@keyframes ease_out_img {
-    0%{
-        opacity: 1;
-        transform: rotateY(0deg);
-    }
-    100%{
-        opacity: 0;
-        transform: rotateY(180deg);
-    }
-    
+.fade-enter-active,
+.fade-exit-active {
+    transition: opacity 500ms, transform 500ms;
 }
-@keyframes ease_in_img {
-    0%{
-        opacity: 0;
-        transform: rotateY(180deg);
-    }
-    100%{
-        opacity: 1;
-        transform: rotateY(360deg);
-    }
-    
-}
+  
+
 
 .card-rule{
     perspective: 1000px; 

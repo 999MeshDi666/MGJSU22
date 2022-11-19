@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./rules-styles/rules.css"
 import Overlay from "../overlay/overlay";
 import { Container } from "react-bootstrap";
@@ -39,7 +40,9 @@ const Rules = ({handleShowText, show}) =>{
     const [IsFlipped, setFlipCard] = useState(false)
     const handleFlipCard = () =>{
         setFlipCard(prevState => !prevState);
+        
     }
+
     const background = {backgroundColor: IsFlipped? "#9f9634":"#3D6C41"};
     const changeImg = IsFlipped? thor: loki;
     return(
@@ -81,12 +84,16 @@ const Rules = ({handleShowText, show}) =>{
                 show={show}
                 content={<RulesText/>}
             />
-            <img src={IsFlipped? thor:loki} 
-                className="gif-img loki-thor" 
-                style={{transform:IsFlipped?  
-                    `rotateY(${180}deg)`:
-                    `rotateY(${0}deg)`}} 
-                alt="loki"/>
+            <SwitchTransition mode="out-in">
+                <CSSTransition
+                    key={IsFlipped}
+                    timeout={500}
+                    classNames="fade"
+                >
+                    <img src={IsFlipped? thor:loki} className={`gif-img loki-thor`} alt={IsFlipped? "thor":"loki"}/>
+                </CSSTransition>
+            </SwitchTransition>
+            
             
         </section>
     )
