@@ -1,7 +1,9 @@
+import { useState } from "react";
 import "./rules-styles/rules.css"
 import Overlay from "../overlay/overlay";
 import { Container } from "react-bootstrap";
-import loki from "../../images/norse/loki.png"
+import loki from "../../images/norse/loki.png";
+import thor from "../../images/norse/thor.png";
 
 const rules = [
     "Проект должен соответствовать тематике «SU Game Jam».",
@@ -33,22 +35,41 @@ const RulesText = () =>{
     )
 }
 const Rules = ({handleShowText, show}) =>{
+
+    const [IsFlipped, setFlipCard] = useState(false)
+    const handleFlipCard = () =>{
+        setFlipCard(prevState => !prevState);
+    }
     return(
-        <section className="rule page">
+        <section className="rule page" style={{backgroundColor: IsFlipped? "#9f9634":"#3D6C41"}}>
             <Container className="wrapper">
                 <div className="rule-content">
                     <div className="general-text rule-text">
                         <h2 className="general-title">Правила & FAQ</h2>
                         <p className="general-subtitle">Правила и FAQ GameJam 2022</p>
                     </div>
-                    
-                    <div className="card card-rule">
-                        <h3 className="card-title">
-                            Перед регистрацией  ознакомьтесь с правилами и FAQ 
-                        </h3>
-                        <button className="general-btns card-rule-btn" onClick={handleShowText}>Читать</button>
+                    <div className="card-rule">
+                        <div className="card-rule-wrapper" style={{ transform: IsFlipped? `rotateY(${180}deg)`:`rotateY(${0}deg)`}}>
+                            <div className="card card-rule-front">
+                                <button className="flip-btn" onClick={handleFlipCard}>Показать FAQ</button>
+                                <h3 className="card-title card-title-rule">
+                                    Перед регистрацией ознакомьтесь с правилами учатися 
+                                </h3>
+                                <button className={"general-btns card-rule-btn-front"} onClick={handleShowText}>Читать</button>
+                            </div>
+                            <div className="card card-rule-back">
+                                <button className="flip-btn" onClick={handleFlipCard}>Показать Правила</button>
+                                <h3 className="card-title card-title-rule">
+                                    Перед регистрацией советуем таже ознакомиться с FAQ
+                                </h3>
+                                <button 
+                                    className={"general-btns card-rule-btn-back" }
+                                    onClick={handleShowText}>
+                                        Читать
+                                </button>
+                            </div>
+                        </div>  
                     </div>
-                
                 </div>
             </Container>
             <Overlay 
@@ -56,7 +77,7 @@ const Rules = ({handleShowText, show}) =>{
                 show={show}
                 content={<RulesText/>}
             />
-            <img src={loki} className="loki gif-img" alt="loki"/>
+            <img src={thor} className="loki gif-img" alt="loki"/>
         </section>
     )
 }

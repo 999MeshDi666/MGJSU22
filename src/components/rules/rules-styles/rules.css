@@ -1,30 +1,91 @@
-.rule{
+/* .rule{
     background-color: #3D6C41;
+} */
+.rule-text{
+    margin-bottom: 8vh;
 }
 .loki{
     right: -25vw;
     height: 90vh;
 }
 .card-rule{
-    background-color: #709874c1;
+    perspective: 1000px; 
 }
-.card-rule-btn{
-    background-color: #495E44;
+.card-title-rule{
+    font-size: 22px;
 }
-.card-rule-btn:hover{
-    background-color: #3d4f39;
+.card-rule-wrapper{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
+.card-rule-front,.card-rule-back{
+    position: absolute;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+.card-rule-front{
+    background-color: #709874c1;
+}
+.card-rule-back{
+    background-color: #c9c57cc1;
+    transform: rotateY(180deg);
+}
+/* #9f9634 */
+.card-rule-btn-front{
+    background-color: #495E44;
+}
+.card-rule-btn-front:hover{
+    background-color: #3d4f39;
+}
+.card-rule-btn-back{
+    background-color: #79763d;
+}
+.card-rule-btn-back:hover{
+    background-color: #6d6a36;
+}
+
+.flip-btn{
+    background: transparent;
+    font-size: 8px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: end;
+    margin-bottom: 8px;
+    transition: .2s;
+}
+.flip-btn:hover{
+    color: rgb(246, 246, 246);
+}
 @media (min-width: 768px) {
     .loki{
         right: 4vw;
     }
+    .card-rule-wrapper{
+        width: 500px;
+        margin: 0 auto;
+    }
+    .card-title-rule{
+        font-size: 26px;
+    }
+    .flip-btn{
+        font-size: 12px;
+    }
 }
 @media (min-width: 992px) {
 
-    .card-rule{
+    .card-rule-front{
         background-color: #709874;
     }
+    .card-rule-back{
+        background-color: #c9c57c;
+    }
+    .card-rule-wrapper{
+        margin: 0;
+    }
+    
    
     
 }
