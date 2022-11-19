@@ -77,7 +77,7 @@ const Rules = ({handleShowText, show}) =>{
                 show={show}
                 content={<RulesText/>}
             />
-            <img src={thor} className="loki gif-img" alt="loki"/>
+            <img src={IsFlipped? thor: loki} className={`gif-img ${IsFlipped? "thor":"loki"}`} alt="loki"/>
         </section>
     )
 }

@@ -8,6 +8,10 @@
     right: -25vw;
     height: 90vh;
 }
+.thor{
+    right: 5vw;
+    height: 90vh;
+}
 .card-rule{
     perspective: 1000px; 
 }
