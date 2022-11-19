@@ -44,7 +44,6 @@ const Rules = ({handleShowText, show}) =>{
     }
 
     const background = {backgroundColor: IsFlipped? "#9f9634":"#3D6C41"};
-    const changeImg = IsFlipped? thor: loki;
     return(
         <section 
             className="rule page" 
@@ -87,7 +86,7 @@ const Rules = ({handleShowText, show}) =>{
             <SwitchTransition mode="out-in">
                 <CSSTransition
                     key={IsFlipped}
-                    timeout={500}
+                    timeout={300}
                     classNames="fade"
                 >
                     <img src={IsFlipped? thor:loki} className={`gif-img loki-thor`} alt={IsFlipped? "thor":"loki"}/>
