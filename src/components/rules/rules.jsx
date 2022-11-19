@@ -40,8 +40,12 @@ const Rules = ({handleShowText, show}) =>{
     const handleFlipCard = () =>{
         setFlipCard(prevState => !prevState);
     }
+    const background = {backgroundColor: IsFlipped? "#9f9634":"#3D6C41"};
+    const changeImg = IsFlipped? thor: loki;
     return(
-        <section className="rule page" style={{backgroundColor: IsFlipped? "#9f9634":"#3D6C41"}}>
+        <section 
+            className="rule page" 
+            style={background}>
             <Container className="wrapper">
                 <div className="rule-content">
                     <div className="general-text rule-text">
@@ -77,7 +81,13 @@ const Rules = ({handleShowText, show}) =>{
                 show={show}
                 content={<RulesText/>}
             />
-            <img src={IsFlipped? thor: loki} className={`gif-img ${IsFlipped? "thor":"loki"}`} alt="loki"/>
+            <img src={IsFlipped? thor:loki} 
+                className="gif-img loki-thor" 
+                style={{transform:IsFlipped?  
+                    `rotateY(${180}deg)`:
+                    `rotateY(${0}deg)`}} 
+                alt="loki"/>
+            
         </section>
     )
 }

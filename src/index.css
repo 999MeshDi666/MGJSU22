@@ -139,6 +139,7 @@ a {
   margin-bottom: 4px;
 }
 .gif-img{
+  height: 90vh;
   position: absolute;
   bottom: 0;
 }

@@ -1,17 +1,44 @@
-/* .rule{
-    background-color: #3D6C41;
-} */
 .rule-text{
     margin-bottom: 8vh;
 }
-.loki{
+
+.loki-thor{   
     right: -25vw;
-    height: 90vh;
+    transition: .2s;
 }
-.thor{
-    right: 5vw;
-    height: 90vh;
+
+.ease-in{
+    animation:  ease_in_img 2s  4s 1 forwards;
+    opacity: 0;
+   
 }
+.ease-out{
+    animation: ease_out_img 2s 2s 1 forwards;
+    opacity: 1;
+}
+@keyframes ease_out_img {
+    0%{
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+    100%{
+        opacity: 0;
+        transform: rotateY(180deg);
+    }
+    
+}
+@keyframes ease_in_img {
+    0%{
+        opacity: 0;
+        transform: rotateY(180deg);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(360deg);
+    }
+    
+}
+
 .card-rule{
     perspective: 1000px; 
 }
@@ -24,7 +51,8 @@
     transform-style: preserve-3d;
 }
 
-.card-rule-front,.card-rule-back{
+.card-rule-front,
+.card-rule-back{
     position: absolute;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
@@ -36,7 +64,7 @@
     background-color: #c9c57cc1;
     transform: rotateY(180deg);
 }
-/* #9f9634 */
+
 .card-rule-btn-front{
     background-color: #495E44;
 }
@@ -52,19 +80,22 @@
 
 .flip-btn{
     background: transparent;
-    font-size: 8px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    font-weight: 900;
-    text-align: end;
     margin-bottom: 8px;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-transform: uppercase;
+    text-align: end;
+    font-size: 8px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
     transition: .2s;
 }
 .flip-btn:hover{
     color: rgb(246, 246, 246);
 }
+
 @media (min-width: 768px) {
-    .loki{
+    .loki-thor{
         right: 4vw;
     }
     .card-rule-wrapper{
