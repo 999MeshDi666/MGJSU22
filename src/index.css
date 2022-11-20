@@ -116,6 +116,10 @@ a {
   line-height: 22px;
   font-weight: 300;
 }
+.info-line{
+  border-bottom: 1px solid #fff;
+  margin-bottom: 1.5vh;
+}
 .info-text{
   font-size: 2.2vw;
   letter-spacing: 2px;
@@ -129,6 +133,7 @@ a {
 }
 .info-subtitle{
   font-weight: bold;
+  margin-bottom: 5px;
 }
 .info-lists{
   list-style-type: disc;

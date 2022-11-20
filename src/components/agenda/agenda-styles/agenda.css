@@ -6,10 +6,7 @@
     line-height: 18px;
     letter-spacing: 1px;
 }
-.agenda-dates{
-    border-bottom: 1px solid #fff;
-    margin-bottom: 2vh;
-}
+
 .scrolls{
     display: flex;
     flex-direction: column;

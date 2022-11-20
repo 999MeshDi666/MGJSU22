@@ -105,7 +105,7 @@ const AgendaText = ({imgIndex}) =>{
             {dates[imgIndex]?dates[imgIndex]["title"]:null}
             <div>
                 {dates[imgIndex]?dates[imgIndex]["dates"].map((date, index)=>
-                    <div className='agenda-dates' key={index}>
+                    <div className='info-line' key={index}>
                         <p className="info-subtitle" >{date.dateTitle}</p>
                         <p>{date.text}</p>
                     </div>

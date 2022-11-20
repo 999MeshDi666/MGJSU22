@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./rules-styles/rules.css"
 import Overlay from "../overlay/overlay";
@@ -6,7 +6,7 @@ import { Container } from "react-bootstrap";
 import loki from "../../images/norse/loki.png";
 import thor from "../../images/norse/thor.png";
 
-const rules = [
+const rulesTxt = [
     "Проект должен соответствовать тематике «SU Game Jam».",
     "На разработку игры дается 48 часов.",
     "Платформа разработки ПК (Системы Windows/Linux) или Web (При использовании которой, участники самостоятельно обеспечивают серверную часть).",
@@ -21,17 +21,54 @@ const rules = [
     "Нарушение интеллектуальной собственности и авторского права в проектах участников строго запрещено и может привести к дисквалификации, все используемые ассеты, созданные не участниками, должны быть свободны для некоммерческого использования, либо у вас должно быть письменное разрешение на их использование!",
     "Взаимодействие между командами не ограничено.",
 ]
-const RulesText = () =>{
+const faqTxt = [
+    {
+        question: "Что мне делать, если у меня нет команды?",
+        answer: "Вы можете подать заявку на участие в одиночку, и либо собрать команду на месте, либо присоединиться к уже существующим командам до старта разработки. Но, если вам не удастся найти команду,вы не сможете принять участие в конкурсе, но сможете принять участие в лекциях и воркшопах. "
+    },
+    {
+        question: "У нашей команды совсем нет опыта, что делать?",
+        answer: "ГеймДжем это отличный способ получить первый опыт, в конце концов, ведь все бывает в первый раз!"
+    },
+    {
+        question: "Можем ли мы использовать  Unity3D/RPG MAker/Game Maker или любой другой игровой движок в разработке своего проекта?",
+        answer: "Да, вы можете использовать любой игровой движок, если конечный проект будет доступен на платформах указанных в правилах ГеймДжема."
+    },
+    {
+        question: "Проект обязательно должен соответствовать тематике 'Мифы'?",
+        answer: "Да. Это необходимое ограничение для поощрения вашего творчества."
+    },
+    {
+        question: "Нам нужно приносить собственную технику (Ноутбуки, граф. планшеты и т.д.)?",
+        answer: "Да, на фестиваль «SU Game Jam 2022» необходимо прийти со своей техникой. Формат BYOD (bring your own device)."
+    },
+    
+]
+const rules = (
+    <ul className="info-lists">
+        {rulesTxt.map((rule)=> 
+            <li key={rule}>
+                {rule}
+            </li>
+        )}
+    </ul>
+            
+)
+
+const faq = (
+    <dl>
+        {faqTxt.map((faq, index)=>
+            <div key={index}>
+                <dt className="info-line">{faq.question}</dt>
+                <dd className="mb-3">{faq.answer}</dd>
+            </div>
+        )}
+    </dl>
+)
+const RulesText = ({IsFlipped}) =>{
     return(       
         <div className="info-text">
-            <ul className="info-lists">
-                {rules.map((rule)=>
-                    <li key={rule}>
-                        {rule}
-                    </li>
-                )}
-            </ul>
-          
+            {IsFlipped? faq: rules}
         </div>
     )
 }
@@ -59,7 +96,7 @@ const Rules = ({handleShowText, show}) =>{
                             <div className="card card-rule-front">
                                 <button className="flip-btn" onClick={handleFlipCard}>Показать FAQ</button>
                                 <h3 className="card-title card-title-rule">
-                                    Перед регистрацией ознакомьтесь с правилами учатися 
+                                    Перед регистрацией ознакомьтесь с правилами участия 
                                 </h3>
                                 <button className={"general-btns card-rule-btn-front"} onClick={handleShowText}>Читать</button>
                             </div>
@@ -81,7 +118,7 @@ const Rules = ({handleShowText, show}) =>{
             <Overlay 
                 handleShowText={handleShowText} 
                 show={show}
-                content={<RulesText/>}
+                content={<RulesText IsFlipped={IsFlipped}/>}
             />
             <SwitchTransition mode="out-in">
                 <CSSTransition
@@ -91,9 +128,7 @@ const Rules = ({handleShowText, show}) =>{
                 >
                     <img src={IsFlipped? thor:loki} className={`gif-img loki-thor`} alt={IsFlipped? "thor":"loki"}/>
                 </CSSTransition>
-            </SwitchTransition>
-            
-            
+            </SwitchTransition> 
         </section>
     )
 }
