@@ -11,13 +11,13 @@ import Agenda from "../agenda/agenda";
 import Registration from "../registration/registration";
 import Rules from "../rules/rules";
 import Navigation from "../navigation/navigation";
+import { OverlayContext } from "../../context";
 
 
 const SwiperPages = () =>{
     const swiperRef = useRef();
     const swiper = useSwiper();
 
-    
     const [imgIndex, setImgIndex] = useState();
     const [show, setShow] = useState(false);
     const handleShowText = (index) =>{
@@ -33,8 +33,8 @@ const SwiperPages = () =>{
         swiperRef.current.slideTo(index)
     }
     return(
-        <>
-            <Navigation toSlide={toSlide} />
+        <OverlayContext.Provider value={{ handleShowText, show}}>
+            {/* <Navigation/> */}
             <Swiper
                 onSwiper={(swiper) =>{
                     swiperRef.current = swiper;
@@ -55,33 +55,20 @@ const SwiperPages = () =>{
                     <Main toSlide={toSlide}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <About 
-                        handleShowText={handleShowText} 
-                        show={show}/>
-                    </SwiperSlide>
-                <SwiperSlide>
-                    <Agenda 
-                        handleShowText={handleShowText} 
-                        show={show}
-                        imgIndex={imgIndex}
-                    />
+                    <About />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Rules 
-                        handleShowText={handleShowText} 
-                        show={show}
-                    />
+                    <Agenda imgIndex={imgIndex}/>
                 </SwiperSlide>
-             
                 <SwiperSlide>
-                    <Registration
-                        handleShowText={handleShowText} 
-                        show={show}
-                    />
+                    <Rules/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Registration/>
                 </SwiperSlide>
    
             </Swiper>
-        </>
+        </OverlayContext.Provider>
     )
 }
 

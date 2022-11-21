@@ -1,6 +1,8 @@
 import "./overlay.css";
-
-const Overlay = ({handleShowText, show, content}) =>{
+import {useContext} from "react";
+import { OverlayContext } from '../../context';
+const Overlay = ({content}) =>{
+    const {handleShowText, show} = useContext(OverlayContext)
     return(
         <div className="overlay" style={{ display: show? "block" : "none"  }}>
             <div className="close-btn" onClick={handleShowText}>

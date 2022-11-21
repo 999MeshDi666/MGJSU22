@@ -1,0 +1,29 @@
+@media (min-width: 576px) {
+    .reg-form{
+        width: 500px;
+    }
+    .reg-control{
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .reg-control::placeholder{  
+        font-size: 12px;
+    }
+    
+}
+@media (min-width: 768px) {
+    .kempir{
+        right: 4vw;
+    }
+    
+}
+@media (min-width: 992px) {
+
+    .card-reg{
+        background-color: #B8B399;
+    }
+    .reg-control{
+        margin-bottom: 12px;
+    }
+    
+}

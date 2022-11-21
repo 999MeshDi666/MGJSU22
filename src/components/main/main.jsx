@@ -2,7 +2,6 @@ import "./main-styles/main.css";
 import "./main-styles/main-responsive.css";
 
 import { Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import venus from "../../images/greek/venus1.gif";
 import angel1 from "../../images/greek/angel1.png";
 import angel2 from "../../images/greek/angel2.png";

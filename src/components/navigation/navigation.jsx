@@ -1,35 +1,34 @@
-import { Container } from "react-bootstrap";
 import { useState } from "react";
 import "./navigation.css";
 
-
-const Navigation = ({toSlide}) =>{
+const navigationList = [
+    {
+        index: 1,
+        nav: "Главная"
+    },
+    {
+        index: 2,
+        nav: "GameJam"
+    },
+    {
+        index: 3,
+        nav: "Расписание"
+    },
+    {
+        index: 4,
+        nav: "Правила"
+    },
+    {
+        index: 5,
+        nav: "Регистрация"
+    },
+]
+const Navigation = () =>{
     const [showNav, setShowNav] = useState(false);
     const handleShowNav = () =>{
         setShowNav(prevState => !prevState);
     }
-    const navigationList = [
-        {
-            index: 1,
-            nav: "Главная"
-        },
-        {
-            index: 2,
-            nav: "GameJam"
-        },
-        {
-            index: 3,
-            nav: "Расписание"
-        },
-        {
-            index: 4,
-            nav: "Правила"
-        },
-        {
-            index: 5,
-            nav: "Регистрация"
-        },
-    ]
+  
     return(
         <header>
             <div className="nav-menu" onClick={handleShowNav}>
