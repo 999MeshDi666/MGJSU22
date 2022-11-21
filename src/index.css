@@ -51,7 +51,14 @@ a {
   text-decoration:none;   
 }
 
-
+.swiper-pagination-vertical.swiper-pagination-bullets 
+.swiper-pagination-bullet, 
+.swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
+  height: 40px;
+  width: 6px;
+  border-radius: 6px;
+  background-color: rgb(225, 225, 225);
+}
 
 .page{
   padding: 50px 0;

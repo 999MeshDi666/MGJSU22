@@ -23,6 +23,22 @@ const rulesTxt = [
 ]
 const faqTxt = [
     {
+        question: "Формат мероприятия?",
+        answer: "«Mythical Game Jam SU 2022» пройдет в оффлайн формате в городе Алматы в Satbayev University по адресу Сатпаева 22."
+    },
+    {
+        question: "Сколько человек в команде?",
+        answer: "Соревнование командное, допускаются команды от 2 до 5 человек."
+    },
+    {
+        question: "Кто может принять участие?",
+        answer: "Команда обучающихся школ, колледжей и ВУЗов достигших 16 лет и ознакомленных с Положением о фестивале разработчиков видео игр «Mythical Game Jam SU 2022» (Положение будет доступно на сайте в ближайшее время)."
+    },
+    {
+        question: "Для какой платформы создаются видео игры?",
+        answer: "Для Персонального компьютера (ПК)."
+    },
+    {
         question: "Что мне делать, если у меня нет команды?",
         answer: "Вы можете подать заявку на участие в одиночку, и либо собрать команду на месте, либо присоединиться к уже существующим командам до старта разработки. Но, если вам не удастся найти команду,вы не сможете принять участие в конкурсе, но сможете принять участие в лекциях и воркшопах. "
     },
@@ -41,6 +57,10 @@ const faqTxt = [
     {
         question: "Нам нужно приносить собственную технику (Ноутбуки, граф. планшеты и т.д.)?",
         answer: "Да, на фестиваль «SU Game Jam 2022» необходимо прийти со своей техникой. Формат BYOD (bring your own device)."
+    },
+    {
+        question: "Можно ли прийти с готовым продуктом?",
+        answer: "Разрешено использование заготовок или ранее созданных прототипов если они были созданы участниками «Mythical Game Jam SU 2022» (но не более 50% продукта, при условии, что каждый ассет будет перечиcлен). В случае возникновения у Организатора и/или Соревновательного Жюри сомнений касательно уникальности разработки Результата, Соревновательное Жюри оставляет за собой право отказать в допуске Результата до процедуры оценки."
     },
     
 ]
@@ -75,6 +95,9 @@ const RulesText = ({IsFlipped}) =>{
 const Rules = ({handleShowText, show}) =>{
 
     const [IsFlipped, setFlipCard] = useState(false)
+    const lokiRef = useRef(null);
+    const thorRef = useRef(null);
+    const nodeRef = IsFlipped ? thorRef : lokiRef;
     const handleFlipCard = () =>{
         setFlipCard(prevState => !prevState);
         
@@ -123,10 +146,11 @@ const Rules = ({handleShowText, show}) =>{
             <SwitchTransition mode="out-in">
                 <CSSTransition
                     key={IsFlipped}
+                    nodeRef={nodeRef}
                     timeout={300}
                     classNames="fade"
                 >
-                    <img src={IsFlipped? thor:loki} className={`gif-img loki-thor`} alt={IsFlipped? "thor":"loki"}/>
+                    <img src={IsFlipped? thor:loki} ref={nodeRef} className={`gif-img loki-thor`} alt={IsFlipped? "thor":"loki"}/>
                 </CSSTransition>
             </SwitchTransition> 
         </section>
