@@ -55,9 +55,12 @@ a {
 .swiper-pagination-bullet, 
 .swiper-vertical>.swiper-pagination-bullets .swiper-pagination-bullet {
   height: 40px;
-  width: 6px;
+  width: 4px;
   border-radius: 6px;
-  background-color: rgb(225, 225, 225);
+  /* background-color: rgb(225, 225, 225); */
+}
+.swiper-pagination-bullet-active{
+  background-color: rgb(220, 220, 220) !important;
 }
 
 .page{
@@ -154,6 +157,14 @@ a {
   height: 90vh;
   position: absolute;
   bottom: 0;
+}
+.btn-el::after{
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #fff;
 }
 @media (min-width: 576px) {
   .info-text{

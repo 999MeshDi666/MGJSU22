@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper";
 import { useRef, useState } from "react";
+import { useSwiper } from 'swiper/react';
 import "swiper/css/bundle";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,7 +10,7 @@ import About from "../about/about";
 import Agenda from "../agenda/agenda";
 import Registration from "../registration/registration";
 import Rules from "../rules/rules";
-import { useSwiper } from 'swiper/react';
+import Navigation from "../navigation/navigation";
 
 
 const SwiperPages = () =>{
@@ -33,6 +34,7 @@ const SwiperPages = () =>{
     }
     return(
         <>
+            <Navigation toSlide={toSlide} />
             <Swiper
                 onSwiper={(swiper) =>{
                     swiperRef.current = swiper;
