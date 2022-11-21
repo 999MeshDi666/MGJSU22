@@ -12,7 +12,6 @@
   animation: show 1s forwards;
 
 }
-
 @keyframes show {
   0% {opacity: 0;}
   100% {opacity: 1;}
@@ -22,15 +21,29 @@
   margin-top: 30px;
 }
 .close-btn{
-  display: inline-block;
+  position: absolute;
+  top: 26px;
+  right: 16px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
   float: right;
+}
+.close-btn::before, .close-btn::after {
+  content: ' ';
+  position: absolute;
+  top: 2px;
+  right: 46%;
+  height: 26px;
+  width: 2px;
+  border-radius: 1px;
+  background-color: rgb(255, 255, 255);
+}
+.close-btn::before {
   transform: rotate(45deg);
 }
-
-.close-btn-el:nth-child(1)::after{
-  transform: rotate(90deg);
-  margin-bottom: -2px;
+.close-btn::after {
+  transform: rotate(-45deg);
 }
 
 @media (min-width: 768px) {
