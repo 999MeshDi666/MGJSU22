@@ -22,6 +22,8 @@
 }
 .loki-thor{   
     right: -25vw;
+   
+    height: 95vh;
     transition: .2s ease-in-out;
 }
 
@@ -98,7 +100,8 @@
 
 @media (min-width: 768px) {
     .loki-thor{
-        right: 4vw;
+        /* right: 4vw; */
+        right: 0;
     }
     .card-rule-wrapper{
         width: 500px;
