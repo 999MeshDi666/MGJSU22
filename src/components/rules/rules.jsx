@@ -4,7 +4,7 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./rules-styles/rules.css"
 import Overlay from "../overlay/overlay";
 import { Container } from "react-bootstrap";
-import loki from "../../images/norse/loki2.gif";
+import loki from "../../images/norse/loki3.gif";
 import thor from "../../images/norse/thor.png";
 import RulesFaqText from "./rulesText";
 

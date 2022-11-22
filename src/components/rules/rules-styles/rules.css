@@ -21,9 +21,8 @@
     }
 }
 .loki-thor{   
+    height: 100vh;
     right: -25vw;
-   
-    height: 95vh;
     transition: .2s ease-in-out;
 }
 
