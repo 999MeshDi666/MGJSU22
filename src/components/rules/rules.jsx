@@ -6,9 +6,9 @@ import Overlay from "../overlay/overlay";
 import { Container } from "react-bootstrap";
 import loki from "../../images/norse/loki.png";
 import thor from "../../images/norse/thor.png";
-import RulesText from "./rulesText";
+import RulesFaqText from "./rulesText";
 
-const Rules = () =>{
+const RulesFaq = () =>{
     const {handleShowText} = useContext(OverlayContext)
     const [IsFlipped, setFlipCard] = useState(false)
     const lokiRef = useRef(null);
@@ -53,7 +53,7 @@ const Rules = () =>{
                 </div>
             </Container>
             <Overlay 
-                content={<RulesText IsFlipped={IsFlipped}/>}
+                content={<RulesFaqText IsFlipped={IsFlipped}/>}
             />
             <SwitchTransition mode="out-in">
                 <CSSTransition
@@ -68,4 +68,4 @@ const Rules = () =>{
         </section>
     )
 }
-export default Rules;
+export default RulesFaq;

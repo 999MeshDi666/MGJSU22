@@ -1,7 +1,22 @@
 .rule-text{
     margin-bottom: 8vh;
 }
-
+.faq-question{
+    font-size: 2.5vw;
+}
+.faq-answers{
+    animation: showAnswer 1s 1 forwards;
+    padding-left: 12px;
+    opacity: 0;
+}
+@keyframes showAnswer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .loki-thor{   
     right: -25vw;
     transition: .2s ease-in-out;

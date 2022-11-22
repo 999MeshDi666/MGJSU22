@@ -9,7 +9,7 @@ import Main from "../main/main";
 import About from "../about/about";
 import Agenda from "../agenda/agenda";
 import Registration from "../registration/registration";
-import Rules from "../rules/rules";
+import RulesFaq from "../rules/rules";
 import Navigation from "../navigation/navigation";
 import { OverlayContext } from "../../context";
 
@@ -61,7 +61,7 @@ const SwiperPages = () =>{
                     <Agenda imgIndex={imgIndex}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <Rules/>
+                    <RulesFaq/>
                 </SwiperSlide>
                 <SwiperSlide>
                     <Registration/>
