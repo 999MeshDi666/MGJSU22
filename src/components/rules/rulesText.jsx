@@ -94,7 +94,7 @@ const Faq = () => {
     return(
         <dl>
             {faqList.map((faq, index)=>
-                <div className="info-line" key={index}>
+                <div className="info-line faq-line" key={index}>
                     <dt className="mb-1 faq-question"  onClick={()=> handleShowAnswer(index)}>
                         <span className="info-show-btn">+</span>
                         {faq.question}
