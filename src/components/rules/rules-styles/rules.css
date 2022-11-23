@@ -9,6 +9,7 @@
 }
 .faq-answers{
     animation: showAnswer 1s 1 forwards;
+    font-style: italic;
     padding-left: 12px;
     opacity: 0;
 }

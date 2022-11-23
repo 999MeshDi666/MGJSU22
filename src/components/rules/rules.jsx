@@ -3,7 +3,7 @@ import { OverlayContext } from '../../context';
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./rules-styles/rules.css"
 import { Container } from "react-bootstrap";
-import loki from "../../images/norse/loki3.webp";
+import loki from "../../images/norse/loki.png";
 import thor from "../../images/norse/thor.png";
 
 const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
