@@ -1,23 +1,17 @@
-import React, { useState, useRef, useContext } from "react";
+import React, { useRef, useContext } from "react";
 import { OverlayContext } from '../../context';
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./rules-styles/rules.css"
-import Overlay from "../overlay/overlay";
 import { Container } from "react-bootstrap";
 import loki from "../../images/norse/loki3.webp";
 import thor from "../../images/norse/thor.png";
-import RulesFaqText from "./rulesText";
 
-const RulesFaq = () =>{
+const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
     const {handleShowText} = useContext(OverlayContext)
-    const [IsFlipped, setFlipCard] = useState(false)
     const lokiRef = useRef(null);
     const thorRef = useRef(null);
     const nodeRef = IsFlipped ? thorRef : lokiRef;
-    const handleFlipCard = () =>{
-        setFlipCard(prevState => !prevState);
-    }
-
+  
     return(
         <section 
             className="rule page" 
@@ -52,9 +46,6 @@ const RulesFaq = () =>{
                     </div>
                 </div>
             </Container>
-            <Overlay 
-                content={<RulesFaqText IsFlipped={IsFlipped}/>}
-            />
             <SwitchTransition mode="out-in">
                 <CSSTransition
                     key={IsFlipped}

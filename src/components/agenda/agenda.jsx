@@ -1,5 +1,4 @@
 import React from 'react';
-import Overlay from "../overlay/overlay";
 import {useContext} from "react";
 import { OverlayContext } from '../../context';
 import "./agenda-styles/agenda.css";
@@ -9,7 +8,6 @@ import scroll1 from "../../images/japan/scroll1.png";
 import scroll2 from "../../images/japan/scroll2.png";
 import scroll3 from "../../images/japan/scroll3.png";
 import benzaiten from "../../images/japan/benzaiten.png";
-import AgendaText from './agendaText';
 
 
 const scrolls = [
@@ -55,9 +53,6 @@ const Agenda = ({imgIndex}) =>{
                 </div>
             </Container>
        
-            <Overlay 
-                content={<AgendaText imgIndex={imgIndex} />}
-            />
             <img src={benzaiten} className="benzaiten gif-img" alt="benzaiten"/>
             
         </section>

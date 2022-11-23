@@ -2,10 +2,8 @@ import "./about-styles/about.css";
 import "./about-styles/about-responsive.css";
 import { Container } from "react-bootstrap";
 import papirus from "../../images/greek/papirus.png";
-import Overlay from "../overlay/overlay";
 import {useContext} from "react";
 import { OverlayContext } from '../../context';
-import AboutText from './aboutText';
 
 const About = () =>{
     const {handleShowText, show} = useContext(OverlayContext)
@@ -24,9 +22,6 @@ const About = () =>{
                          onClick={handleShowText}/>
                 </div>
             </Container>
-            <Overlay 
-                content={<AboutText/>}
-            />
         </section>
     )
 }

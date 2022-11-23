@@ -10,7 +10,6 @@
   z-index: 6;
   opacity: 0;
   animation: show 1s forwards;
-
 }
 @keyframes show {
   0% {opacity: 0;}

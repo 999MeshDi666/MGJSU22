@@ -1,11 +1,9 @@
 import {useContext} from "react";
 import { OverlayContext } from '../../context';
-import Overlay from "../overlay/overlay";
 import { Container } from "react-bootstrap";
 import "./registration-styles/registration.css";
 import "./registration-styles/reg-responsive.css";
 import kempir from "../../images/turkic/kempir.gif";
-import Form from "./form";
 
 const Registration = () =>{
     const {handleShowText} = useContext(OverlayContext)
@@ -27,9 +25,6 @@ const Registration = () =>{
                    
                 </div>
             </Container>
-            <Overlay 
-                content={<Form handleShowText={handleShowText}/>} 
-            />
             <img src={kempir} className="kempir gif-img" alt="kempir"/>
         </section>
     )

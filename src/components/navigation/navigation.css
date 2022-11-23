@@ -1,7 +1,7 @@
 .nav-overlay{
     background: #2E2E2E 
-                url("../../images/loader-texture.webp");
-    z-index: 4;
+                url("../../images/loader-texture.webp") !important;
+    z-index: 4 !important;
 }
 .nav-menu{
     position: fixed;

@@ -1,34 +1,17 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import "./navigation.css";
 
-const navigationList = [
-    {
-        index: 1,
-        nav: "Главная"
-    },
-    {
-        index: 2,
-        nav: "GameJam"
-    },
-    {
-        index: 3,
-        nav: "Расписание"
-    },
-    {
-        index: 4,
-        nav: "Правила"
-    },
-    {
-        index: 5,
-        nav: "Регистрация"
-    },
-]
-const Navigation = () =>{
+const navigationList = ["Главная", "GameJam", "Расписание","Правила","Регистрация" ]
+
+const Navigation = ({swiperRef}) =>{
     const [showNav, setShowNav] = useState(false);
     const handleShowNav = () =>{
         setShowNav(prevState => !prevState);
     }
-  
+    const handleSlideTo =(index)=>{
+        setShowNav(false)
+        swiperRef.current.slideTo(index+1)
+    }
     return(
         <header>
             <div className="nav-menu" onClick={handleShowNav}>
@@ -42,9 +25,9 @@ const Navigation = () =>{
             <nav className="nav-overlay overlay" style={{ display: showNav? "block" : "none"  }}>
                 <ul className="nav-list">
                     {
-                        navigationList.map((nav)=>
-                            <li key={nav.index}>{
-                                nav.nav}
+                        navigationList.map((nav, index)=>
+                            <li onClick={()=>handleSlideTo(index)} key={nav}>
+                                {nav}
                             </li>
                         )
                     }
