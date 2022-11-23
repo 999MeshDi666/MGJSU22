@@ -2,10 +2,7 @@
     .reg-form{
         width: 500px;
     }
-    .reg-control{
-        font-size: 16px;
-        margin-bottom: 10px;
-    }
+  
     .reg-control::placeholder{  
         font-size: 12px;
     }

@@ -22,7 +22,7 @@
     }
 }
 .loki-thor{   
-    height: 100vh;
+    /* height: 90vh; */
     right: -25vw;
     transition: .2s ease-in-out;
 }
@@ -54,7 +54,6 @@
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
-
 .card-rule-front,
 .card-rule-back{
     position: absolute;
@@ -89,7 +88,7 @@
     text-underline-offset: 5px;
     text-transform: uppercase;
     text-align: end;
-    font-size: 8px;
+    font-size: 9px;
     font-weight: bold;
     letter-spacing: 0.5px;
     transition: .2s;
@@ -100,8 +99,8 @@
 
 @media (min-width: 768px) {
     .loki-thor{
-        /* right: 4vw; */
-        right: 0;
+        right: 4vw;
+        /* right: 0; */
     }
     .card-rule-wrapper{
         width: 500px;
