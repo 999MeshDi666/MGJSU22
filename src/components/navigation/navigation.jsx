@@ -33,10 +33,10 @@ const Navigation = () =>{
         <header>
             <div className="nav-menu" onClick={handleShowNav}>
                 <p className="nav-title">Menu</p>
-                <div>
-                    <span className="btn-el nav-btn-el"></span>
-                    <span className="btn-el nav-btn-el"></span>
-                    <span className="btn-el nav-btn-el"></span>
+                <div className={`menu-trigger ${showNav? "active": ""}`}>
+                    <span className="btn-el"></span>
+                    <span className="btn-el"></span>
+                    <span className="btn-el"></span>
                 </div>
             </div>
             <nav className="nav-overlay overlay" style={{ display: showNav? "block" : "none"  }}>

@@ -34,7 +34,7 @@ const SwiperPages = () =>{
     }
     return(
         <OverlayContext.Provider value={{ handleShowText, show}}>
-            {/* <Navigation/> */}
+            {/* <Navigation/>  */}
             <Swiper
                 onSwiper={(swiper) =>{
                     swiperRef.current = swiper;
