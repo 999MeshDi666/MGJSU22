@@ -1,0 +1,38 @@
+.contacts{
+    background-color: #2A3D27;
+}
+.contact-content{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.contact-info{
+    display: flex;
+}
+
+.contact-subtitle{
+    font-size: 14px;
+}
+.contact-txt-inner{
+    display: flex;
+    margin-top: 5vh;
+}
+.contact-sn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 6vh
+}
+.contact-icons{
+    width: 40px;
+    margin-bottom: 6px;
+}
+.contact-map{
+    margin-bottom: 8vw;
+}
+.contacts-map-img{
+    background-image: url('../../images/contact/map.png');
+    background-repeat: no-repeat;
+    background-position: center 85%;
+    background-size: cover;
+    height: 60vw;
+}

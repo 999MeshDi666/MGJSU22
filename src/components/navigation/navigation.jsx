@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState} from "react";
 import "./navigation.css";
 
 const navigationList = ["Главная", "GameJam", "Расписание","Правила","Регистрация" ]

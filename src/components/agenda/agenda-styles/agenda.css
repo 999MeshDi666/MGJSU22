@@ -2,7 +2,10 @@
     background:#572525;
 }
 
-
+.agenda-title{
+    font-size: 3vw;
+    margin-bottom: 2vw;
+  }
 .scrolls{
     display: flex;
     flex-direction: column;

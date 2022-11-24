@@ -12,7 +12,7 @@ const Registration = () =>{
             <Container className="wrapper">
                 <div className="registration-content">
                     <div className="general-text reg-text">
-                        <h2 className="general-title">Регистрация на SUMGJ22</h2>
+                        <h2 className="general-title">Регистрация на MGJSU22</h2>
                         <p className="general-subtitle">Регистрация команды</p>
                     </div>
                     

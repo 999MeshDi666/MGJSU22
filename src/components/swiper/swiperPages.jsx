@@ -10,6 +10,7 @@ import About from "../about/about";
 import Agenda from "../agenda/agenda";
 import Registration from "../registration/registration";
 import RulesFaq from "../rules/rules";
+import Contacts from "../contacts/contacts";
 import Navigation from "../navigation/navigation";
 import Overlay from "../overlay/overlay";
 import { OverlayContext } from "../../context";
@@ -81,6 +82,9 @@ const SwiperPages = () =>{
                 </SwiperSlide>
                 <SwiperSlide>
                     <Registration/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Contacts/>
                 </SwiperSlide>
             </Swiper>
         </OverlayContext.Provider>

@@ -132,11 +132,8 @@ a {
   text-align: justify;
   font-weight: 300;
 }
+
 .info-title{
-  font-size: 3vw;
-  margin-bottom: 2vw;
-}
-.info-subtitle{
   font-weight: bold;
 }
 .info-lists{
