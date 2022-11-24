@@ -83,9 +83,9 @@ const SwiperPages = () =>{
                 <SwiperSlide>
                     <Registration/>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                     <Contacts/>
-                </SwiperSlide>
+                </SwiperSlide> */}
             </Swiper>
         </OverlayContext.Provider>
     )
