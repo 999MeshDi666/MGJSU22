@@ -1,6 +1,7 @@
 import React from 'react';
 import {useContext} from "react";
 import { OverlayContext } from '../../context';
+import { LanguageOption } from "../../context";
 import "./agenda-styles/agenda.css";
 import "./agenda-styles/agenda-responsive.css";
 import { Container } from "react-bootstrap";
@@ -28,6 +29,7 @@ const scrolls = [
     }
 ]
 const Agenda = () =>{
+    const {chosenLang} = useContext(LanguageOption)
     const {handleShowOverlay, imgIndex} = useContext(OverlayContext)
       
     const images = scrolls.map((scroll, index)=>(
@@ -44,8 +46,8 @@ const Agenda = () =>{
             <Container className="wrapper">
                 <div className="agenda-content">
                     <div className="general-text">
-                        <h2 className="general-title">Расписание</h2>
-                        <p className="general-subtitle">Расписание GameJam 2022</p>
+                        <h2 className="general-title">{chosenLang['agenda'].title}</h2>
+                        <p className="general-subtitle">{chosenLang['agenda'].subtitle}</p>
                     </div>
                     <div className="scrolls">
                         {images}

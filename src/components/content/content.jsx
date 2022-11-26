@@ -1,7 +1,7 @@
 import LangContext from "../languages/langContext";
 import OverlayContexts from "../overlay/overlayContext";
 import SwiperPages from "../swiper/swiperPages";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 const Content = () =>{
     const swiperRef = useRef();
     return(

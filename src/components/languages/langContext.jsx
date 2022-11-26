@@ -2,10 +2,11 @@ import { useState } from "react";
 import {LanguageOption} from "../../context";
 import ru from "../../langs/ru.json";
 import kz from "../../langs/kz.json";
-import SwiperPages from "../swiper/swiperPages";
+import en from "../../langs/en.json";
+
 const LangContext = ({children}) =>{
 
-    const langList = {ru, kz}
+    const langList = {ru, kz, en}
     const [lang, setLang] = useState(window.localStorage.getItem('cur_lang')||"ru");
     const chosenLang = langList[lang]
     const handleChooseLang = (e) =>{

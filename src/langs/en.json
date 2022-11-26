@@ -1,0 +1,30 @@
+{
+    "main":{
+        "mainDate": "Almaty. December 6-10",
+        "regBtn": "Registration"
+    },
+    "about":{
+        "title": "About Game Jame",
+        "subtitle": "Click on the papyrus to\nget more information"
+    },
+    "agenda":{
+        "title": "Agenda",
+        "subtitle": "GameJam 2022 agenda"
+    },
+    "rulesFaq":{
+        "title": "Rules & FAQ",
+        "subtitle": "Rules & FAQ GameJam 2022",
+        "rules": "Before registering, read the rules of participation",
+        "showRules": "Show rules",
+        "showFaq": "Show faq",
+        "faq": "Before registering, we also advise you to read the FAQ",
+        "read": "Read"
+    },
+    "reg":{
+        "title": "Registration on MGJSU22",
+        "subtitle": "Team registration",
+        "registration": "Start your journey to gamedev with us at Game Jam",
+        "start": "Start"
+    }
+
+}

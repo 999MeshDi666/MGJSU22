@@ -35,9 +35,15 @@ const Main = ({swiperRef}) =>{
         <section className="main page">
             <Container className="wrapper main-wrapper">
                 <div className="main_content">
-                    <p className="main_subtitle">{chosenLang.mainDate}</p>
+                    <p className="main_subtitle">{
+                        chosenLang['main'].mainDate
+                    }</p>
                     <h1 className="main_title">GameJam <br/> 2022</h1>
-                    <button className="main_reg-btn general-btns" onClick={toSlide}>{chosenLang.regBtn}</button>
+                    <button 
+                        className="main_reg-btn general-btns" 
+                        onClick={toSlide}>{
+                        chosenLang['main'].regBtn
+                    }</button>
                 </div>
             </Container>
             <img src={venus} className="venus gif-img" alt="venus"/>

@@ -1,7 +1,7 @@
 import "../navigation/navigation.css"
 import { useContext } from "react"
 import { LanguageOption } from "../../context"
-const langs = ['ru','kz']
+const langs = ['ru','kz','en']
 const LangSelect = () =>{
     const {handleChooseLang, lang} = useContext(LanguageOption)
     return(

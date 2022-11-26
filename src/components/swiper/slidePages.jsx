@@ -5,11 +5,11 @@ import Agenda from "../agenda/agenda";
 import Registration from "../registration/registration";
 import Rules from "../rules/rules";
 
-const SlidePages = ({toSlide}) =>{
+const SlidePages = () =>{
     return(
         <>
             <SwiperSlide>
-                <Main toSlide={toSlide}/>
+                <Main />
             </SwiperSlide>
             <SwiperSlide>
                 <About />

@@ -1,5 +1,6 @@
 import React, { useRef, useContext } from "react";
 import { OverlayContext } from '../../context';
+import { LanguageOption } from "../../context";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./rules-styles/rules.css"
 import { Container } from "react-bootstrap";
@@ -8,6 +9,7 @@ import thor from "../../images/norse/thor.png";
 
 const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
     const {handleShowOverlay} = useContext(OverlayContext)
+    const {chosenLang} = useContext(LanguageOption)
     const lokiRef = useRef(null);
     const thorRef = useRef(null);
     const nodeRef = IsFlipped ? thorRef : lokiRef;
@@ -19,27 +21,43 @@ const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
             <Container className="wrapper">
                 <div className="rule-content">
                     <div className="general-text rule-text">
-                        <h2 className="general-title">Правила & FAQ</h2>
-                        <p className="general-subtitle">Правила и FAQ GameJam 2022</p>
+                        <h2 className="general-title">{chosenLang['rulesFaq'].title}</h2>
+                        <p className="general-subtitle">{chosenLang['rulesFaq'].subtitle}</p>
                     </div>
                     <div className="card-rule">
-                        <div className="card-rule-wrapper" style={{ transform: IsFlipped? `rotateY(${180}deg)`:`rotateY(${0}deg)`}}>
+                        <div className="card-rule-wrapper" 
+                             style={{ 
+                                    transform: IsFlipped? `rotateY(${180}deg)`
+                                    :`rotateY(${0}deg)`
+                                }}>
                             <div className="card card-rule-front">
-                                <button className="flip-btn" onClick={handleFlipCard}>Показать FAQ</button>
+                                <button 
+                                    className="flip-btn" 
+                                    onClick={handleFlipCard}>
+                                    {chosenLang['rulesFaq'].showFaq}
+                                </button>
                                 <h3 className="card-title card-title-rule">
-                                    Перед регистрацией ознакомьтесь с правилами участия 
+                                    {chosenLang['rulesFaq'].rules}
                                 </h3>
-                                <button className="general-btns card-rule-btn-front" onClick={handleShowOverlay}>Читать</button>
+                                <button 
+                                    className="general-btns card-rule-btn-front" 
+                                    onClick={handleShowOverlay}>
+                                    {chosenLang['rulesFaq'].read}
+                                </button>
                             </div>
                             <div className="card card-rule-back">
-                                <button className="flip-btn" onClick={handleFlipCard}>Показать Правила</button>
+                                <button 
+                                    className="flip-btn" 
+                                    onClick={handleFlipCard}>
+                                    {chosenLang['rulesFaq'].showRules}
+                                </button>
                                 <h3 className="card-title card-title-rule">
-                                    Перед регистрацией советуем таже ознакомиться с FAQ
+                                    {chosenLang['rulesFaq'].faq}
                                 </h3>
                                 <button 
                                     className={"general-btns card-rule-btn-back" }
                                     onClick={handleShowOverlay}>
-                                        Читать
+                                        {chosenLang['rulesFaq'].read}
                                 </button>
                             </div>
                         </div>  
