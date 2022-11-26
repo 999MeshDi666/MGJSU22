@@ -1,8 +1,6 @@
 const dates = [
     {   
-        title: (<h3 className="agenda-title">
-                    Вторник – 6 декабря <br/>(Церемония открытия. Первый день фестиваля)
-                </h3>),
+        title: `Вторник – 6 декабря <br/> (Церемония открытия. Первый день фестиваля)`,
      
         dates: [
                 {
@@ -37,9 +35,7 @@ const dates = [
     },
     {
          
-        title: (<h3 className="agenda-title">
-                    Дни с 7 по 9 декабря
-                </h3>),
+        title: `Дни с 7 по 9 декабря`,
         dates: [
             {
                 dateTitle: "09:00-09:30",
@@ -66,10 +62,8 @@ const dates = [
     },
     {
          
-        title: (<h3 className="agenda-title">
-                    Суббота 10 декабря <br/> (Закрытие фестиваля)
-                </h3>),
-          dates: [
+        title: `Суббота 10 декабря <br/> (Закрытие фестиваля)`,
+        dates: [
             {
                 dateTitle: "10:00-13:00",
                 text:  "Презентация работ участниками фестиваля.", 
@@ -91,7 +85,8 @@ const AgendaText = ({imgIndex}) =>{
 
     return(
         <div className="info-text agenda-text">
-            {dates[imgIndex]?dates[imgIndex]["title"]:null}
+            <h3 className="agenda-title">{dates[imgIndex]?dates[imgIndex]["title"]:null}</h3>
+            
             <div>
                 {dates[imgIndex]?dates[imgIndex]["dates"].map((date, index)=>
                     <div className='info-line' key={index}>

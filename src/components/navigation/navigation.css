@@ -3,19 +3,32 @@
                 url("../../images/loader-texture.webp") !important;
     z-index: 4 !important;
 }
-.nav-menu{
+.navigation{
     position: fixed;
     top: 16px;
     right: 16px;
     z-index: 5;
     display: flex;
+}
+
+
+
+.lang-select{
+    padding: 8px;
+}
+.nav-menu{
+    display: flex;
     align-items: center;
     padding: 6px;
+   
+}
+.nav-menu,.lang-select{
     background-color: #999999;
     border: 1px solid #181818;
     cursor: pointer;
 }
-.nav-title{
+.nav-title,
+.lang-select{
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-right: 10px;

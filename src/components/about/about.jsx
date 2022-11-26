@@ -4,22 +4,23 @@ import { Container } from "react-bootstrap";
 import papirus from "../../images/greek/papirus.png";
 import {useContext} from "react";
 import { OverlayContext } from '../../context';
-
+import { LanguageOption } from "../../context";
 const About = () =>{
-    const {handleShowText, show} = useContext(OverlayContext)
+    const {handleShowOverlay, show} = useContext(OverlayContext)
+    const {chosenLang} = useContext(LanguageOption)
     return(
         <section className="about page">
             <Container className="wrapper">
                 <div className="about-content">
                     <div className="general-text">
-                        <h2 className="general-title">О GAMEJAM</h2>
-                        <p className="general-subtitle">Кликни на папирус чтобы <br/> получить больше информации</p>
+                        <h2 className="general-title">{chosenLang['about'].title}</h2>
+                        <p className="general-subtitle">{chosenLang['about'].subtitle}</p>
                     </div>
                     <img src={papirus} 
                          className="papirus" 
                          style={{transform: show? `scale(${1.3})` : null}} 
                          alt="papirus" 
-                         onClick={handleShowText}/>
+                         onClick={handleShowOverlay}/>
                 </div>
             </Container>
         </section>

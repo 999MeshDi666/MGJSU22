@@ -6,18 +6,21 @@ import AgendaText from "../agenda/agendaText";
 import Form from "../registration/form";
 import RulesFaqText from "../rules/rulesText";
 
-const Overlay = ({imgIndex, IsFlipped, sliderIndex}) =>{
+const Overlay = ({IsFlipped}) =>{
     
-    const {handleShowText, show} = useContext(OverlayContext)
+    const { handleShowOverlay,
+            sliderIndex,
+            imgIndex,
+            show } = useContext(OverlayContext)
     const content = [
         <AboutText/>, 
         <AgendaText imgIndex={imgIndex}/>,
         <RulesFaqText IsFlipped={IsFlipped}/>,
-        <Form handleShowText={handleShowText}/>,
+        <Form handleShowText={handleShowOverlay}/>,
     ]
     return(
         <div className="overlay" style={{ display: show? "block" : "none"  }}>
-            <div className="close-btn" onClick={handleShowText}>
+            <div className="close-btn" onClick={handleShowOverlay}>
             </div>
             <div className="overlay-content">
                 {content[sliderIndex-1]}

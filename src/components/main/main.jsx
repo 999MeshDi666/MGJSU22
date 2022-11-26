@@ -1,11 +1,13 @@
 import "./main-styles/main.css";
 import "./main-styles/main-responsive.css";
-
+import { useContext } from "react";
+import { LanguageOption } from "../../context";
 import { Container } from "react-bootstrap";
 import venus from "../../images/greek/venus1.gif";
 import angel1 from "../../images/greek/angel1.png";
 import angel2 from "../../images/greek/angel2.png";
 import angel3 from "../../images/greek/angel3.png";
+
 
 const angels = [
     {
@@ -24,14 +26,18 @@ const angels = [
         alt: "angel3"
     },
 ]
-const Main = ({toSlide}) =>{
+const Main = ({swiperRef}) =>{
+    const toSlide = () =>{
+        swiperRef.current.slideTo(5)
+    }
+    const {chosenLang} = useContext(LanguageOption)
     return(
         <section className="main page">
             <Container className="wrapper main-wrapper">
                 <div className="main_content">
-                    <p className="main_subtitle">Алматы. 6-10 Декабря</p>
+                    <p className="main_subtitle">{chosenLang.mainDate}</p>
                     <h1 className="main_title">GameJam <br/> 2022</h1>
-                    <button className="main_reg-btn general-btns" onClick={()=> toSlide(5)}>Регистрация</button>
+                    <button className="main_reg-btn general-btns" onClick={toSlide}>{chosenLang.regBtn}</button>
                 </div>
             </Container>
             <img src={venus} className="venus gif-img" alt="venus"/>

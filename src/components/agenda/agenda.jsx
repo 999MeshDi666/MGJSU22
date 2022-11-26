@@ -27,8 +27,8 @@ const scrolls = [
         alt: "scroll3"
     }
 ]
-const Agenda = ({imgIndex}) =>{
-    const {handleShowText} = useContext(OverlayContext)
+const Agenda = () =>{
+    const {handleShowOverlay, imgIndex} = useContext(OverlayContext)
       
     const images = scrolls.map((scroll, index)=>(
                 <img src={scroll.src} 
@@ -36,7 +36,7 @@ const Agenda = ({imgIndex}) =>{
                     alt={scroll.alt} 
                     style={{transform: imgIndex === index? `scale(${1.1})`:  null}} 
                     key={index} 
-                    onClick={ ()=> handleShowText(index)}/>
+                    onClick={ ()=> handleShowOverlay(index)}/>
             )) 
     
     return(

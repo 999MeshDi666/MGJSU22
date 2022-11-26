@@ -29,6 +29,7 @@ p,a,
 fieldset,
 input,
 textarea,
+select,
 button{
   margin:0; 
   padding:0; 
@@ -43,12 +44,20 @@ ul, ol, dd {
 }
 fieldset, 
 input,
+select,
 button { 
   border-width:0; 
   outline: none;
 }
 a { 
   text-decoration:none;   
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets 

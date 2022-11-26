@@ -7,7 +7,7 @@ import loki from "../../images/norse/loki.png";
 import thor from "../../images/norse/thor.png";
 
 const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
-    const {handleShowText} = useContext(OverlayContext)
+    const {handleShowOverlay} = useContext(OverlayContext)
     const lokiRef = useRef(null);
     const thorRef = useRef(null);
     const nodeRef = IsFlipped ? thorRef : lokiRef;
@@ -29,7 +29,7 @@ const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
                                 <h3 className="card-title card-title-rule">
                                     Перед регистрацией ознакомьтесь с правилами участия 
                                 </h3>
-                                <button className={"general-btns card-rule-btn-front"} onClick={handleShowText}>Читать</button>
+                                <button className="general-btns card-rule-btn-front" onClick={handleShowOverlay}>Читать</button>
                             </div>
                             <div className="card card-rule-back">
                                 <button className="flip-btn" onClick={handleFlipCard}>Показать Правила</button>
@@ -38,7 +38,7 @@ const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
                                 </h3>
                                 <button 
                                     className={"general-btns card-rule-btn-back" }
-                                    onClick={handleShowText}>
+                                    onClick={handleShowOverlay}>
                                         Читать
                                 </button>
                             </div>

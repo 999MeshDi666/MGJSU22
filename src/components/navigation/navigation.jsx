@@ -1,4 +1,5 @@
 import { useState} from "react";
+import LangSelect from "../languages/lang";
 import "./navigation.css";
 
 const navigationList = ["Главная", "GameJam", "Расписание","Правила","Регистрация" ]
@@ -14,15 +15,20 @@ const Navigation = ({swiperRef}) =>{
     }
     return(
         <header>
-            <div className="nav-menu" onClick={handleShowNav}>
-                <p className="nav-title">Menu</p>
-                <div className={`menu-trigger ${showNav? "active": ""}`}>
-                    <span className="btn-el"></span>
-                    <span className="btn-el"></span>
-                    <span className="btn-el"></span>
+            <div className="navigation">
+                <LangSelect/>
+                <div className="nav-menu" onClick={handleShowNav}>
+                    <p className="nav-title">Menu</p>
+                    <div className={`menu-trigger ${showNav? "active": ""}`}>
+                        <span className="btn-el"></span>
+                        <span className="btn-el"></span>
+                        <span className="btn-el"></span>
+                    </div>
                 </div>
             </div>
-            <nav className="nav-overlay overlay" style={{ display: showNav? "block" : "none"  }}>
+            
+            <nav className="nav-overlay overlay" 
+                    style={{ display: showNav? "block" : "none"  }}>
                 <ul className="nav-list">
                     {
                         navigationList.map((nav, index)=>

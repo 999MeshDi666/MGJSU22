@@ -6,7 +6,7 @@ import "./registration-styles/reg-responsive.css";
 import kempir from "../../images/turkic/kempir.gif";
 
 const Registration = () =>{
-    const {handleShowText} = useContext(OverlayContext)
+    const {handleShowOverlay} = useContext(OverlayContext)
     return(
         <section className="registration page">
             <Container className="wrapper">
@@ -20,7 +20,7 @@ const Registration = () =>{
                         <h3 className="card-title">
                             Начните свой путь в геймдев с нами на GameJam
                         </h3>
-                        <button className="general-btns card-reg-btn" onClick={handleShowText}>Начать</button>
+                        <button className="general-btns card-reg-btn" onClick={handleShowOverlay}>Начать</button>
                     </div>
                    
                 </div>

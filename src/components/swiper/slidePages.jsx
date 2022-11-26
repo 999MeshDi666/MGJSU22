@@ -5,7 +5,7 @@ import Agenda from "../agenda/agenda";
 import Registration from "../registration/registration";
 import Rules from "../rules/rules";
 
-const SlidePages = ({toSlide, imgIndex}) =>{
+const SlidePages = ({toSlide}) =>{
     return(
         <>
             <SwiperSlide>
@@ -15,7 +15,7 @@ const SlidePages = ({toSlide, imgIndex}) =>{
                 <About />
             </SwiperSlide>
             <SwiperSlide>
-                <Agenda imgIndex={imgIndex}/>
+                <Agenda/>
             </SwiperSlide>
             <SwiperSlide>
                 <Rules/>
