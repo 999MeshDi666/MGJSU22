@@ -5,7 +5,8 @@
 .agenda-title{
     font-size: 3vw;
     margin-bottom: 2vw;
-  }
+    white-space: pre;
+}
 .scrolls{
     display: flex;
     flex-direction: column;

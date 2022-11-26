@@ -1,56 +1,57 @@
-import { useState} from "react";
+import { useState, useContext, useEffect } from "react";
+import { LanguageOption } from "../../context";
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css'; 
 
-const formFields = [
-    {
-        type: "text",
-        placeholder: "название команды",
-        name: "entry.622377088",
-    },
-    {
-        type: "text",
-        placeholder: "учебное заведение",
-        name: "entry.966331574",
-    },
-    {
-        type: "email",
-        placeholder: "электронная почта",
-        name: "entry.1842236906",
-    },
-    {
-        type: "tel",
-        placeholder: "номер телефона",
-        name: "entry.1419582377",
-    },
-    {
-        type: "text",
-        placeholder: "капитан",
-        name: "entry.1601897725",
-    },
-    {
-        type: "text",
-        placeholder: "участник",
-        name: "entry.1688673403",
-    },
-    {
-        type: "text",
-        placeholder: "участник",
-        name: "entry.1712183872",
-    },
-    {
-        type: "text",
-        placeholder: "участник",
-        name: "entry.752129752",
-    },
-    {
-        type: "text",
-        placeholder: "участник",
-        name: "entry.1555555961",
-    },
+// const formFields = [
+//     {
+//         type: "text",
+//         placeholder: "название команды",
+//         name: "entry.622377088",
+//     },
+//     {
+//         type: "text",
+//         placeholder: "учебное заведение",
+//         name: "entry.966331574",
+//     },
+//     {
+//         type: "email",
+//         placeholder: "электронная почта",
+//         name: "entry.1842236906",
+//     },
+//     {
+//         type: "tel",
+//         placeholder: "номер телефона",
+//         name: "entry.1419582377",
+//     },
+//     {
+//         type: "text",
+//         placeholder: "капитан",
+//         name: "entry.1601897725",
+//     },
+//     {
+//         type: "text",
+//         placeholder: "участник",
+//         name: "entry.1688673403",
+//     },
+//     {
+//         type: "text",
+//         placeholder: "участник",
+//         name: "entry.1712183872",
+//     },
+//     {
+//         type: "text",
+//         placeholder: "участник",
+//         name: "entry.752129752",
+//     },
+//     {
+//         type: "text",
+//         placeholder: "участник",
+//         name: "entry.1555555961",
+//     },
  
 
-]
+// ]
 const initialFormData = {
     "entry.622377088": "",
     "entry.966331574": "",
@@ -64,7 +65,7 @@ const initialFormData = {
 }
 
 const Form = ({handleShowText}) =>{
-   
+    const {chosenLang} = useContext(LanguageOption)
     var notyf = new Notyf({
         duration: 1000,
         position: {
@@ -107,7 +108,7 @@ const Form = ({handleShowText}) =>{
             className="reg-form" id="reg-form" 
             onSubmit={handleSubmit} 
         >
-            {formFields.map((input, index)=>
+            {chosenLang['formContent'].formFields.map((input, index)=>
                 <input 
                     key={index} 
                     type={input.type} 
@@ -120,7 +121,7 @@ const Form = ({handleShowText}) =>{
                 />
             
             )}
-        <input type="submit" value="Регистрация" className="general-btns reg-btn"/>
+        <input type="submit" value={chosenLang['formContent'].regBtn} className="general-btns reg-btn"/>
     </form>
 
     )

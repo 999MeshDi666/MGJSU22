@@ -25,6 +25,217 @@
         "subtitle": "Team registration",
         "registration": "Start your journey to gamedev with us at Game Jam",
         "start": "Start"
+    },
+    "aboutContent":{
+        "aboutTxt": [
+            "Mythical Game Jam SU 2022 is an annual, republican, 5-day festival of computer game development for students and schoolchildren developing in the field of programming, design, game design, illustration, literature, modeling, music and art. The event is organized by the Institute of Automation and Information Technology at Satbayev University and the HUB independent youth community.",
+            "Тhe theme of 2022 is “Mythology”, dedicated to the Year of Children in Kazakhstan. It implies a free interpretation of the theme and the use of Mythologies of any cultures, up to the modern one. But special attention is paid to projects dedicated to the Turkic and Kazakh mythologies.",
+            "The first day of the event will be dedicated to a conference with invited speakers from the gaming industry and related fields. The conference will be held in an open form, in a hybrid format and will be available to everyone. On the second, third and fourth days, within 48 hours, the festival participants will develop their game projects."
+        ]
+    },
+    "agendaContent":{
+        "agendaDates":[
+            {   
+                "title": "Tuesday – December 6\n (Opening ceremony. The first day of the festival)",
+                "dates": [
+                        {
+                            "dateTitle": "10:30-11:00",
+                            "text": "Gathering of participants of \"Mythical Game Jam SU 2022\"" 
+                        },
+                        {
+                            "dateTitle": "11:00-12:10",
+                            "text": "The opening ceremony. Presentation of \"Mythical Game Jam SU 2022\""
+                        },
+                        {
+                            "dateTitle": "12:10-12:20",
+                            "text":  "Acquaintance with the composition of the jury. Welcome speech of the jury."
+                        },
+                        {
+                            "dateTitle": "12:20-12:30",
+                            "text":  "Countdown. Opening of the festival"
+                        },
+                        {
+                            "dateTitle": "12:30-13:30",
+                            "text":  "Lunch"
+                        },
+                        {
+                            "dateTitle": "14:00-17:00",
+                            "text":  "Master classes from the speakers of the festival"
+                        },
+                        {
+                            "dateTitle": "17:00",
+                            "text": "Completion of the first day of the festival"
+                        }
+                    ]
+            },
+            {
+                 
+                "title": "Days from December 7 to December 9",
+                "dates": [
+                    {
+                        "dateTitle": "09:00-09:30",
+                        "text":  "Gathering of all participants of the festival"
+                    },
+                    {
+                        "dateTitle": "10:00",
+                        "text":  "Start Game Jam SU 22"
+                    },
+                    {
+                        "dateTitle": "08.12.22|all day",
+                        "text":  "The work of teams and mentors."
+                    },
+                    {
+                        "dateTitle": "09.12.22|9:00-11:00",
+                        "text":   "Admission project \"SU GAME JAM \" up to 11 hours 00 min 09.12.2022."
+                    },
+                    {
+                        "dateTitle": "11:00–18:00",
+                        "text":  "Preparation of teams for project protection. Free time"
+                    }
+                 
+                ]
+            },
+            {
+                 
+                "title": "Saturday, December 10\n(Closing of the festival)",
+                "dates": [
+                    {
+                        "dateTitle": "10:00-13:00",
+                        "text":  "Presentation of works by the participants of the festival."
+                    },
+                    {
+                        "dateTitle": "13:00–15:00",
+                        "text":  "Jury work"
+                    },
+                    {
+                        "dateTitle": "16:00–17:00",
+                        "text":  "Award ceremony for the winners of \"Mythical Game Jam SU 2022\""
+                    }
+                
+                ]
+            }
+        
+        ]
+    },
+    "rulesFaqContent":{
+        "rulesTxt": [
+            "The project should correspond to the theme of \"SU Game Jam\".",
+            "The game is given 48 hours to develop.",
+            "A PC development platform (Windows/Linux Systems) or Web (When using which, participants independently provide the server part).",
+            "Mandatory presence at the registration and closing of the event.",
+            "Only teams can participate. At the same time, the number of participants in the team should be from 2 to 5 people.",
+            "It is allowed to use blanks or previously created prototypes if they were created personally by team members.",
+            "It is allowed to use any technologies and development engines.",
+            "Additionally, there should be things in the project that refer to 3 of the 5 specified additional words (the words are opened immediately before the start of \"SU Game Jam\"",
+            "It is allowed to use all publicly available libraries and middleware.",
+            "Any content creation utilities and developer utilities are allowed (3ds max, Photoshop, Blender, etc.)",
+            "The game must be accompanied by the source code, a compiled file with the project and a team report (Word, PowerPoint, etc.), which gives the arguments of the project, as well as information about all third-party assets used in the game.",
+            "Infringement of intellectual property and copyright in the projects of participants is strictly prohibited and may lead to disqualification, all assets used created by non-participants must be free for non-commercial use, or you must have written permission to use them!",
+            "The interaction between the teams is not limited."
+        ],
+        "faqTxt" :[
+            {
+                "question": "The format of the event?",
+                "answer": "\"Mythical Game Jam SU 2022\" will be held offline in Almaty at Satbayev University at Satpayev 22.",
+                "display": false
+            },
+            {
+                "question": "How many people are on the team?",
+                "answer": "The competition is a team competition, teams from 2 to 5 people are allowed.",
+                "display": false
+            },
+            {
+                "question": "Who can participate?",
+                "answer": "A team of students from schools, colleges and universities who have reached the age of 16 and are familiar with the Regulations on the festival of video game developers \"Mythical Game Jam SU 2022\".",
+                "display": false
+            },
+            {
+                "question": "What platform are video games created for?",
+                "answer": "For a Personal computer (PC).",
+                "display": false
+            },
+            {
+                "question": "What should I do if I don't have a team?",
+                "answer": "You can apply for participation alone, and either assemble a team on the spot, or join existing teams before the start of development. However, if you fail to find a team, you will not be able to participate in the competition, but you will be able to take part in lectures and workshops.",
+                "display": false
+            },
+            {
+                "question": "Our team has no experience at all, what should we do?",
+                "answer": "Game Jam is a great way to get your first experience, after all, because everything happens for the first time!",
+                "display": false
+            },
+            {
+                "question": "Can we use Unity3D/RPG MAker/Game Maker or any other game engine in the development of our project?",
+                "answer": "Yes, you can use any game engine if the final project will be available on the platforms specified in the rules of the game jam.",
+                "display": false
+            },
+            {
+                "question": "Does the project have to correspond to the theme of 'Myths'?",
+                "answer": "Yes. This is a necessary restriction to encourage your creativity.",
+                "display": false
+            },
+            {
+                "question": "Do we need to bring our own equipment (Laptops, graph. tablets, etc.)?",
+                "answer": "Yes, you need to come to the festival \"SU Game Jam 2022\" with your own equipment. BYOD (bring your own device) format.",
+                "display": false
+            },
+            {
+                "question": "Is it possible to come with a finished product?",
+                "answer": "It is allowed to use blanks or previously created prototypes if they were created by the participants of \"Mythical Game Jam SU 2022\" (but not more than 50% of the product, provided that each asset is listed). If the Organizer and/or the Competition Jury have doubts about the uniqueness of the development of the Result, the Competition Jury reserves the right to refuse admission of the Result to the evaluation procedure.",
+                "display": false
+            }
+        ]
+    },
+    "formContent":{
+        
+        "formFields" :[
+            {
+                "type": "text",
+                "placeholder": "team name",
+                "name": "entry.622377088"
+            },
+            {
+                "type": "text",
+                "placeholder": "educational institution",
+                "name": "entry.966331574"
+            },
+            {
+                "type": "email",
+                "placeholder": "email",
+                "name": "entry.1842236906"
+            },
+            {
+                "type": "tel",
+                "placeholder": "phone number",
+                "name": "entry.1419582377"
+            },
+            {
+                "type": "text",
+                "placeholder": "captain",
+                "name": "entry.1601897725"
+            },
+            {
+                "type": "text",
+                "placeholder": "participant",
+                "name": "entry.1688673403"
+            },
+            {
+                "type": "text",
+                "placeholder": "participant",
+                "name": "entry.1712183872"
+            },
+            {
+                "type": "text",
+                "placeholder": "participant",
+                "name": "entry.752129752"
+            },
+            {
+                "type": "text",
+                "placeholder": "participant",
+                "name": "entry.1555555961"
+            }
+        ],
+        "regBtn": "Registration"
     }
 
 }
