@@ -236,6 +236,9 @@
             }
         ],
         "regBtn": "Registration"
+    },
+    "navigation":{
+        "navList": ["Main", "GameJam", "Agenda","Rules","Registration"]
     }
 
 }

@@ -1,11 +1,12 @@
-import { useState} from "react";
+import { useState,  useContext } from "react";
 import LangSelect from "../languages/lang";
 import "./navigation.css";
-
+import { LanguageOption } from "../../context";
 const navigationList = ["Главная", "GameJam", "Расписание","Правила","Регистрация" ]
 
 const Navigation = ({swiperRef}) =>{
     const [showNav, setShowNav] = useState(false);
+    const {chosenLang} = useContext(LanguageOption)
     const handleShowNav = () =>{
         setShowNav(prevState => !prevState);
     }
@@ -13,6 +14,7 @@ const Navigation = ({swiperRef}) =>{
         setShowNav(false)
         swiperRef.current.slideTo(index+1)
     }
+    
     return(
         <header>
             <div className="navigation">
@@ -31,7 +33,7 @@ const Navigation = ({swiperRef}) =>{
                     style={{ display: showNav? "block" : "none"  }}>
                 <ul className="nav-list">
                     {
-                        navigationList.map((nav, index)=>
+                        chosenLang['navigation'].navList.map((nav, index)=>
                             <li onClick={()=>handleSlideTo(index)} key={nav}>
                                 {nav}
                             </li>

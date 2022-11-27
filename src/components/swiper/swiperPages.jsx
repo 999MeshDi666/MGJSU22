@@ -64,9 +64,9 @@ const SwiperPages = ({swiperRef}) =>{
                     <SwiperSlide>
                         <Registration/>
                     </SwiperSlide>
-                    {/* <SwiperSlide>
+                    <SwiperSlide>
                         <Contacts/>
-                    </SwiperSlide> */}
+                    </SwiperSlide>
                 </Swiper>
             </>
            

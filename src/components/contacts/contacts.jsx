@@ -69,10 +69,10 @@ const Contacts = () =>{
                                 )}
                             </div>
                         </div>
-                        <div className="contact-map">
+                        {/* <div className="contact-map">
                             <h3 className="info-title mb-2">Место собра:</h3>
                             <div className="contacts-map-img"></div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
              </Container>

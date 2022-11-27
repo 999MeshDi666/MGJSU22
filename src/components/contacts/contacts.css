@@ -14,16 +14,16 @@
 }
 .contact-txt-inner{
     display: flex;
-    margin-top: 5vh;
+    margin-top: 2vh;
 }
 .contact-sn{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 6vh
+    margin-left: 4vh
 }
 .contact-icons{
-    width: 40px;
+    width: 36px;
     margin-bottom: 6px;
 }
 .contact-map{

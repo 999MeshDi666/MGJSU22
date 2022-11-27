@@ -13,7 +13,7 @@ const Rules =({lang})=> {
     )       
 }
 const Faq = ({lang}) => {
-   
+    
     const [faqList, setFaqList] = useState(lang['rulesFaqContent'].faqTxt)
     const handleShowAnswer = (id) =>{
         setFaqList((prevState)=>
@@ -24,7 +24,11 @@ const Faq = ({lang}) => {
             })
         )
     } 
-  
+
+    useEffect(()=>{
+        setFaqList(lang['rulesFaqContent'].faqTxt)
+    },[lang])
+    
     return(
         <dl>
             {faqList.map((faq, index)=>
