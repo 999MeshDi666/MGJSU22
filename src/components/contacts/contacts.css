@@ -34,5 +34,41 @@
     background-repeat: no-repeat;
     background-position: center 85%;
     background-size: cover;
-    height: 60vw;
+    height: 30vw;
+    filter: drop-shadow(-2px 4px 38px rgba(33, 33, 33, 0.5));
+}
+
+@media (min-width: 992px) {
+   
+    
+    
+    .contact-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact-info {
+        margin-top: 40px;
+    }
+    .contact-map {
+        margin-bottom: 0;
+    }
+    .contacts-map-img{
+        height: 24vw;
+        width: 500px;
+    }
+    .contact-sn{
+        justify-content: stretch;
+    }
+    .contact-icons {
+        margin-bottom: 14px;
+    }
+    
+}
+
+@media (min-width: 1200px) {
+    .contact-map {
+        margin-bottom: 0;
+        margin-right: 16vh;
+    }
 }

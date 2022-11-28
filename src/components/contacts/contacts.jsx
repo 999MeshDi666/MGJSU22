@@ -1,5 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
+import { useContext } from "react";
+import { LanguageOption } from "../../context";
 import "./contacts.css";
 import telegram from "../../images/contact/telegram.png";
 import instagram from "../../images/contact/instagram.png";
@@ -30,34 +32,35 @@ const contactSN = [
         src: discord
     },
     {
-        href: "#",
+        href: "https://t.me/gamejamsu",
         src: telegram
     }
 ]
 
 const Contacts = () =>{
+    const {chosenLang} = useContext(LanguageOption)
     return(
         <section className="contacts page">
              <Container className="wrapper">
                 <div className="contacts-content">
                     <div className="general-text contacts-text">
-                        <h2 className="general-title">Контакты MGJSU22</h2>
-                        <p className="general-subtitle">Контакты поддержки и получения <br/> доп. информации GameJam 2022</p>
+                        <h2 className="general-title">{chosenLang['contacts'].title}</h2>
+                        <p className="general-subtitle">{chosenLang['contacts'].subtitle}</p>
                     </div>
                     
                     <div className="contact-content">
                         <div className="contact-info">
                             <div>
-                                <h3 className="info-title mb-2">Адрес:</h3>
-                                <p className="contact-subtitle">ул. Сатпаева 22, Алматы 050000</p>
+                                <h3 className="info-title mb-2">{chosenLang['contacts'].address.title}</h3>
+                                <p className="contact-subtitle">{chosenLang['contacts'].address.subtitle}</p>
                                 <div className="contact-txt-inner">
                                     <span>
-                                        <h3  className="info-title mb-2">Почта:</h3>
-                                        <p className="contact-subtitle">info@thehub.su</p>
+                                        <h3  className="info-title mb-2">{chosenLang['contacts'].email.title}</h3>
+                                        <p className="contact-subtitle">{chosenLang['contacts'].email.subtitle}</p>
                                     </span>
                                     <span className="ms-3">
-                                        <h3 className="info-title mb-2">Телефон:</h3>
-                                        <p className="contact-subtitle">+7 707 291 7226</p>
+                                        <h3 className="info-title mb-2">{chosenLang['contacts'].tel.title}</h3>
+                                        <p className="contact-subtitle">{chosenLang['contacts'].tel.subtitle}</p>
                                     </span>
                                 </div>
                             </div>
@@ -69,10 +72,10 @@ const Contacts = () =>{
                                 )}
                             </div>
                         </div>
-                        {/* <div className="contact-map">
-                            <h3 className="info-title mb-2">Место собра:</h3>
+                        <div className="contact-map">
+                            <h3 className="info-title mb-2">{chosenLang['contacts'].mapTitle}</h3>
                             <div className="contacts-map-img"></div>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
              </Container>
