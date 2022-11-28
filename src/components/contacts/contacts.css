@@ -1,5 +1,5 @@
 .contacts{
-    background-color: #2A3D27;
+    background-color: #798e5e;
 }
 .contact-content{
     display: flex;
@@ -23,7 +23,7 @@
     margin-left: 4vh
 }
 .contact-icons{
-    width: 36px;
+    width: 32px;
     margin-bottom: 6px;
 }
 .contact-map{
@@ -35,12 +35,12 @@
     background-position: center 85%;
     background-size: cover;
     height: 30vw;
-    filter: drop-shadow(-2px 4px 38px rgba(33, 33, 33, 0.5));
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6) inset;
 }
 
 @media (min-width: 992px) {
-   
-    
     
     .contact-content {
         display: flex;
@@ -48,10 +48,11 @@
         justify-content: space-between;
     }
     .contact-info {
-        margin-top: 40px;
+        margin-top: 8vh;
     }
     .contact-map {
         margin-bottom: 0;
+        
     }
     .contacts-map-img{
         height: 24vw;
@@ -61,6 +62,7 @@
         justify-content: stretch;
     }
     .contact-icons {
+        width: 36px;
         margin-bottom: 14px;
     }
     
@@ -68,7 +70,12 @@
 
 @media (min-width: 1200px) {
     .contact-map {
-        margin-bottom: 0;
-        margin-right: 16vh;
+        /* margin-left: 16vh; */
+        margin-right: 30vh;
     }
+    .contacts-map-img{
+        height: 20vw;
+       
+    }
+   
 }

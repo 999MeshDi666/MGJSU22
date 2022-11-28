@@ -38,15 +38,15 @@ const Contacts = () =>{
                     <div className="contact-content">
                         <div className="contact-info">
                             <div>
-                                <h3 className="info-title mb-2">{chosenLang['contacts'].address.title}</h3>
+                                <h3 className="info-title mb-lg-2">{chosenLang['contacts'].address.title}</h3>
                                 <p className="contact-subtitle">{chosenLang['contacts'].address.subtitle}</p>
                                 <div className="contact-txt-inner">
                                     <span>
-                                        <h3  className="info-title mb-2">{chosenLang['contacts'].email.title}</h3>
+                                        <h3  className="info-title mb-lg-2">{chosenLang['contacts'].email.title}</h3>
                                         <p className="contact-subtitle">{chosenLang['contacts'].email.subtitle}</p>
                                     </span>
                                     <span className="ms-3">
-                                        <h3 className="info-title mb-2">{chosenLang['contacts'].tel.title}</h3>
+                                        <h3 className="info-title mb-lg-2">{chosenLang['contacts'].tel.title}</h3>
                                         <p className="contact-subtitle">{chosenLang['contacts'].tel.subtitle}</p>
                                     </span>
                                 </div>
