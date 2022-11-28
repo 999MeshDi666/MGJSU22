@@ -8,20 +8,7 @@ import instagram from "../../images/contact/instagram.png";
 import discord from "../../images/contact/discord.png";
 import map from "../../images/contact/map.png";
 
-const contactTxt = [
-    {
-        title:  "Адрес:",
-        subtitle: "ул. Сатпаева 22, Алматы 050000"
-    },
-    {
-        title:  "Почта:",
-        subtitle: "info@thehub.su"
-    },
-    {
-        title:  "Телефон:",
-        subtitle: "+7 707 291 7226"
-    }
-]
+
 const contactSN = [
     {
         href: "https://instagram.com/gamejam_su?igshid=YmMyMTA2M2Y=",
