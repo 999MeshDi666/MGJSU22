@@ -2,10 +2,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import {useContext} from "react";
 import { LanguageOption } from '../../context';
 import { Container } from "react-bootstrap";
+import { EffectCards } from "swiper";
 import "./slider.css"
-import { EffectFlip,Navigation } from "swiper";
-import "swiper/css/effect-flip";
-import "swiper/css/navigation";
+import "swiper/css/effect-cards";
+
 
 import pic2 from "../../images/slider/pic2.jpg";
 import pic3 from "../../images/slider/pic3.jpg";
@@ -32,14 +32,13 @@ const Slider = () =>{
                     </div>
                 </div>
                 <Swiper
-                    effect={"flip"}
+                    effect={"cards"}
                     grabCursor={true}
                     pagination={true}
                     allowTouchMove={true}
                     loop = {true}
                     loopedSlides = {1}
-                    //  navigation={true}
-                    modules={[EffectFlip]}
+                    modules={[EffectCards]}
                     className="slider-imgs"
                 >
                     {pics.map((pic, index)=>
