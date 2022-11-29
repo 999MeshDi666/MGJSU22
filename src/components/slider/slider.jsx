@@ -34,7 +34,6 @@ const Slider = () =>{
                 <Swiper
                     effect={"cards"}
                     grabCursor={true}
-                    pagination={true}
                     allowTouchMove={true}
                     loop = {true}
                     loopedSlides = {1}
