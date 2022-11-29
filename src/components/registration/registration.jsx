@@ -17,7 +17,6 @@ const Registration = () =>{
                         <h2 className="general-title">{chosenLang['reg'].title}</h2>
                         <p className="general-subtitle">{chosenLang['reg'].subtitle}</p>
                     </div>
-                    
                     <div className="card card-reg">
                         <h3 className="card-title">
                             {chosenLang['reg'].registration}

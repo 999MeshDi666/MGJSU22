@@ -2,8 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel, Pagination } from "swiper";
 import { useState } from "react";
 import { useSwiper } from 'swiper/react';
-import "swiper/css/bundle";
-import "swiper/css";
+
 import "swiper/css/pagination";
 import Main from "../main/main";
 import About from "../about/about";
@@ -12,6 +11,7 @@ import Registration from "../registration/registration";
 import RulesFaq from "../rules/rules";
 import Contacts from "../contacts/contacts";
 import Navigation from "../navigation/navigation";
+import Slider from "../slider/slider";
 import Overlay from "../overlay/overlay";
 
 
@@ -46,26 +46,29 @@ const SwiperPages = ({swiperRef}) =>{
                     modules={[Mousewheel, Pagination]}
                     className="swiper-pages"
                 >
-                    <SwiperSlide>
+                    <SwiperSlide className="slide-page">
                         <Main  swiperRef={swiperRef}/>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="slide-page">
                         <About />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="slide-page">
                         <Agenda />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="slide-page">
                         <RulesFaq 
                             IsFlipped = {IsFlipped} 
                             handleFlipCard = {handleFlipCard}
                         />
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="slide-page">
                         <Registration/>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="slide-page">
                         <Contacts/>
+                    </SwiperSlide>
+                    <SwiperSlide className="slide-page">
+                        <Slider/>
                     </SwiperSlide>
                 </Swiper>
             </>

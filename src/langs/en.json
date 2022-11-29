@@ -43,6 +43,10 @@
         },
         "mapTitle":"Meeting place:"
     },
+    "slider":{
+        "title": "Memories Retro GameJam21",
+        "subtitle": "Memories of the previous GameJam"
+    },
     "aboutContent":{
         "aboutTxt": [
             "Mythical Game Jam SU 2022 is an annual, republican, 5-day festival of computer game development for students and schoolchildren developing in the field of programming, design, game design, illustration, literature, modeling, music and art. The event is organized by the Institute of Automation and Information Technology at Satbayev University and the HUB independent youth community.",
@@ -255,7 +259,7 @@
         "regBtn": "Registration"
     },
     "navigation":{
-        "navList": ["Main", "GameJam", "Agenda","Rules","Registration"]
+        "navList": ["Main", "GameJam", "Agenda","Rules","Registration","Contacts"]
     }
 
 }

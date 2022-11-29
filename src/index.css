@@ -82,7 +82,7 @@ select {
 }
 
 .texture::after,
-.swiper-slide::after{
+.slide-page::after{
   content: "";
   background: url("./images/loader-texture.webp");
   width: 100%;

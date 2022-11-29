@@ -24,7 +24,7 @@
         "title": "MGJSU22-ге тіркелу",
         "subtitle": "GameJam-ге команданы тіркеу",
         "registration": "Бізбен бірге геймдевке жолыңызды бастаңыз",
-        "start": "Тіркеу"
+        "start": "Тіркелу"
     },
     "contacts":{
         "title": "MGJSU22 контактілері",
@@ -42,6 +42,10 @@
             "subtitle":"+7 707 291 7226"
         },
         "mapTitle":"Кездесу жері:"
+    },
+    "slider":{
+        "title": "Retro GameJam21 естеліктері",
+        "subtitle": "Өткен GameJam естеліктері"
     },
     "aboutContent":{
         "aboutTxt": [
@@ -255,7 +259,7 @@
         "regBtn": "Тіркелу"
     },
     "navigation":{
-        "navList": ["Басты бет", "GameJam", "Шара кестеі","Ережелер","Тіркелу"]
+        "navList": ["Басты бет", "GameJam", "Шара кестеі","Ережелер","Тіркелу","Контактілер"]
     }
     
 }
