@@ -45,7 +45,9 @@
     },
     "slider":{
         "title": "Retro GameJam естеліктері",
-        "subtitle": "Өткен GameJam естеліктері"
+        "subtitle": "Өткен GameJam естеліктері",
+        "doc": "Фестиваль туралы ереже"
+
     },
     "aboutContent":{
         "aboutTxt": [

@@ -45,7 +45,8 @@
     },
     "slider":{
         "title": "Memories Retro GameJam",
-        "subtitle": "Memories of the previous GameJam"
+        "subtitle": "Memories of the previous GameJam",
+        "doc": "Regulations on the festival"
     },
     "aboutContent":{
         "aboutTxt": [

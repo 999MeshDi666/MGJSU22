@@ -45,7 +45,8 @@
     },
     "slider":{
         "title": "Воспоминания Retro GameJam",
-        "subtitle": "Воспоминания о предыдущем GameJam"
+        "subtitle": "Воспоминания о предыдущем GameJam",
+        "doc": "Положение о фестивале"
     },
     "aboutContent":{
         "aboutTxt": [
