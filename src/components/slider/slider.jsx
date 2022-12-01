@@ -17,7 +17,7 @@ import pic12 from "../../images/slider/pic12.jpg";
 import pic13 from "../../images/slider/pic13.jpg";
 import pic14 from "../../images/slider/pic14.jpg";
 import pic15 from "../../images/slider/pic15.jpg";
-import doc from "../../docs/polojenieGJ.pdf";
+
 
 const pics = [pic2,pic3,pic6,pic8,pic9,pic11,pic12,pic13,pic14,pic15]
 const Slider = () =>{
@@ -30,11 +30,6 @@ const Slider = () =>{
                     <div className="general-text reg-text">
                         <h2 className="general-title">{chosenLang['slider'].title}</h2>
                         <p className="general-subtitle">{chosenLang['slider'].subtitle}</p>
-                        <a href={doc} 
-                           download="polojenieGJ" 
-                           className="slider-download-btn">
-                            {chosenLang['slider'].doc}
-                        </a>
                     </div>
                 </div>
                 <Swiper

@@ -14,6 +14,7 @@
     "rulesFaq":{
         "title": "Правила & FAQ",
         "subtitle": "Правила и FAQ GameJam 2022",
+        "doc": "Скачать положение о фестивале",
         "rules": "Перед регистрацией ознакомьтесь с правилами участия",
         "showRules": "Показать правила",
         "showFaq": "Показать faq",
@@ -45,8 +46,7 @@
     },
     "slider":{
         "title": "Воспоминания Retro GameJam",
-        "subtitle": "Воспоминания о предыдущем GameJam",
-        "doc": "Положение о фестивале"
+        "subtitle": "Воспоминания о предыдущем GameJam"
     },
     "aboutContent":{
         "aboutTxt": [

@@ -6,7 +6,7 @@ import "./rules-styles/rules.css"
 import { Container } from "react-bootstrap";
 import loki from "../../images/norse/loki.png";
 import thor from "../../images/norse/thor.png";
-
+import doc from "../../docs/polojenieGJ.pdf";
 const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
     const {handleShowOverlay} = useContext(OverlayContext)
     const {chosenLang} = useContext(LanguageOption)
@@ -23,6 +23,11 @@ const RulesFaq = ({handleFlipCard, IsFlipped}) =>{
                     <div className="general-text rule-text">
                         <h2 className="general-title">{chosenLang['rulesFaq'].title}</h2>
                         <p className="general-subtitle">{chosenLang['rulesFaq'].subtitle}</p>
+                        <a href={doc} 
+                           download="polojenieGJ" 
+                           className="rule-download-btn">
+                            {chosenLang['rulesFaq'].doc}
+                        </a>
                     </div>
                     <div className="card-rule">
                         <div className="card-rule-wrapper" 

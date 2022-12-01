@@ -14,6 +14,7 @@
     "rulesFaq":{
         "title": "Ережелер мен FAQ",
         "subtitle": "Game Jame 2022 eрежелері мен FAQ",
+        "doc": "Фестиваль туралы ережені жүктеу",
         "rules": "Тіркелу алдында қатысу ережелерімен танысыңыз",
         "showRules": "Ережелерді көрсету",
         "showFaq": "FAQ көрсету",
@@ -45,9 +46,7 @@
     },
     "slider":{
         "title": "Retro GameJam естеліктері",
-        "subtitle": "Өткен GameJam естеліктері",
-        "doc": "Фестиваль туралы ереже"
-
+        "subtitle": "Өткен GameJam естеліктері"
     },
     "aboutContent":{
         "aboutTxt": [
